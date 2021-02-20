@@ -1,0 +1,77 @@
+<mat-drawer-container class="example-container" hasBackdrop="true">
+    <mat-drawer #drawer mode="over">
+        <h2 class="logo text-uppercase primary-color col-12 pt-5 mb-3 px-4">Canny</h2>
+        <perfect-scrollbar>
+            <ul class="list-unstyled sidenav col-12 pb-5">
+                <li>
+                    <a href="javascript:void(0)" class="text-decoration-none highlight-color d-inline-flex p-2">Register</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="text-decoration-none highlight-color d-inline-flex p-2">Login</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="text-decoration-none highlight-color d-inline-flex p-2">Help</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="text-decoration-none mb-2 highlight-color d-inline-flex p-2">Money Transfer</a>
+                    <ul class="list-unstyled px-3">
+                        <li>
+                            <a href="" class="d-flex text-decoration-none">
+                                <mat-icon class="mt-2 mr-2 primary-color font-9">navigate_next</mat-icon>
+                                <div>
+                                    <span class="primary-color font-9">Send Money</span>
+                                    <p class="font-8 text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="d-flex text-decoration-none">
+                                <mat-icon class="mt-2 mr-2 primary-color font-9">navigate_next</mat-icon>
+                                <div>
+                                    <span class="primary-color font-9">Send large amounts</span>
+                                    <p class="font-8 text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </perfect-scrollbar>
+        <div class="col-12 row justify-content-center position-absolute bg-white b-0 l-0 m-0 py-3">
+            <a href="javascript:void(0)" class="text-secondary transition mr-4">
+                <fa-icon class="" [icon]="faFacebook"></fa-icon>
+            </a>
+            <a href="javascript:void(0)" class="text-secondary transition mr-4">
+                <fa-icon class="" [icon]="faTwitter"></fa-icon>
+            </a>
+            <a href="javascript:void(0)" class="text-secondary transition">
+                <fa-icon class="" [icon]="faInstagram"></fa-icon>
+            </a>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <nav class="navbar navbar-default position-fixed w-100 t-0 z-index-2 primary-bg">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand font-weight-bold h1 text-white" href="#">Canny</a>
+                </div>
+                <div class="ml-auto d-flex align-items-center">
+                    <span class="text-white d-inline-flex mw-80px">
+                        <mat-form-field appearance="fill" class="no_style w-100">
+                            <mat-select class="text-white font-9 font-weight-bold" [(ngModel)]="selectedLanguage">
+                                <mat-option *ngFor="let language of languages" [value]="language">{{language}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </span>
+                    <span>
+                        <a href="javascript:void(0)" class="text-white" (click)="drawer.toggle()" mat-raised-button>
+                            <mat-icon>segment</mat-icon>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+    </mat-drawer-content>
+</mat-drawer-container>

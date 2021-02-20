@@ -1,0 +1,173 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+$primary: #24273A;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.l-0 {
+    left: 0;
+}
+
+.b-0 {
+    bottom: 0;
+}
+
+.primary-bg {
+    background-color: $primary;
+}
+
+.primary-color {
+    color: $primary;
+}
+
+.highlight-color {
+    color: #EA4855;
+    &:hover {
+        color: #EA4855;
+    }
+}
+
+.font-9 {
+    font-size: 0.9em;
+}
+
+.font-8 {
+    font-size: 0.8em;
+}
+
+.transition {
+    transition: all 0.5s;
+}
+
+.no_style {
+    .mat-form-field-flex {
+        background: transparent;
+    }
+    &.mat-form-field-appearance-fill .mat-form-field-underline::before,
+    .mat-form-field-ripple {
+        background: transparent !important;
+    }
+    .mat-select-value {
+        color: #fff;
+    }
+    &.mat-form-field-appearance-fill .mat-select-arrow-wrapper {
+        transform: none;
+    }
+    .mat-select-arrow {
+        color: #fff !important;
+        border: 0;
+        width: auto;
+        height: auto;
+        &:before {
+            content: "keyboard_arrow_down";
+            font-family: 'Material Icons';
+        }
+    }
+    .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+        color: #dc3545;
+    }
+}
+
+.no_style_input {
+    &.mat-form-field-appearance-legacy .mat-form-field-underline {
+        background-color: #fff;
+    }
+    &.mat-form-field.mat-focused .mat-form-field-ripple {
+        background-color: #dc3545;
+    }
+    &.mat-form-field.mat-focused .mat-form-field-label {
+        color: #fff;
+    }
+    &.mat-form-field-appearance-legacy .mat-form-field-label {
+        color: rgba(255, 255, 255, 0.54);
+    }
+}
+
+.currency_section {
+    background-color: #5A5C6B;
+    border-radius: 2em;
+}
+
+.z-index-1 {
+    z-index: 1;
+}
+
+.z-index-2 {
+    z-index: 2;
+}
+
+.mw-80px {
+    max-width: 80px;
+}
+
+.mat-drawer {
+    width: 280px;
+    max-height: 100vh;
+    position: fixed !important;
+}
+
+.o-contain {
+    object-fit: contain;
+}
+
+.platform_slider {
+    .owl-stage-outer {
+        padding-bottom: 2em;
+        padding-top: 2em;
+    }
+    .active.center {
+        transform: scale(1.1);
+        .border-gradient {
+            background: transparent;
+        }
+    }
+}
+
+.grey-bg {
+    background: #454658;
+}
+
+.rounded_1 {
+    border-radius: 1em;
+}
+
+.transfer_table {
+    tbody {
+        th,
+        td {
+            box-shadow: inset 0px 11px 10px -9px #aaabbd;
+            position: relative;
+            &:not(:last-child):after {
+                content: "";
+                background: #636475;
+                position: absolute;
+                right: 0;
+                width: 1px;
+                height: 55%;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+    }
+}
+
+.sidenav {
+    max-height: calc(100vh - 120px);
+    overflow: auto;
+}
+
+.mat-drawer-inner-container {
+    height: auto !important;
+}
