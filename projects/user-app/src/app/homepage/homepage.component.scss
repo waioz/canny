@@ -24,21 +24,20 @@
 
 @media (min-width: 1000px) {
     .w-lg-20 {
-        width: 20%;
+        max-width: 20%;
     }
-}
-
-.steps>div {
-    &:not(:last-child):before {
-        content: "keyboard_arrow_right";
-        font-family: 'Material Icons';
-        position: absolute;
-        right: -5px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: -webkit-linear-gradient(#eee, #dc3545);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+    .steps>div {
+        &:not(:last-child):before {
+            content: "keyboard_arrow_right";
+            font-family: 'Material Icons';
+            position: absolute;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: -webkit-linear-gradient(#eee, #dc3545);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 }
 
