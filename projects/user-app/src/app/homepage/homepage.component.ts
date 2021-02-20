@@ -43,7 +43,7 @@ export class HomepageComponent implements OnInit {
   platforms = [
     {
       id: 1,
-      src: '../../assets/monzo_logo.png',
+      src: 'canny/dist/user-app/assets/monzo_logo.png',
       type: 'Cheapest',
       reciepient_amount: 678.29,
       reciepient_percentage: 24.2,
@@ -54,7 +54,7 @@ export class HomepageComponent implements OnInit {
     },
     {
       id: 2,
-      src: '../../assets/paypal_logo.png',
+      src: 'canny/dist/user-app/assets/paypal_logo.png',
       type: 'Best',
       reciepient_amount: 678.29,
       reciepient_percentage: 24.2,
@@ -65,7 +65,7 @@ export class HomepageComponent implements OnInit {
     },
     {
       id: 3,
-      src: '../../assets/monzo_logo.png',
+      src: 'canny/dist/user-app/assets/monzo_logo.png',
       type: 'Fastest',
       reciepient_amount: 678.29,
       reciepient_percentage: 24.2,
@@ -76,7 +76,7 @@ export class HomepageComponent implements OnInit {
     },
     {
       id: 4,
-      src: '../../assets/paypal_logo.png',
+      src: 'canny/dist/user-app/assets/paypal_logo.png',
       type: 'Fixed',
       reciepient_amount: 678.29,
       reciepient_percentage: 24.2,
