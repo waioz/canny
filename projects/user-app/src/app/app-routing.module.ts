@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: '', loadChildren: () => import('./homepage/homepage.module').then(m => m.HomepageModule) }
+  { path: 'canny/dist/user-app', loadChildren: () => import('./homepage/homepage.module').then(m => m.HomepageModule) }
 ];
 
 @NgModule({
