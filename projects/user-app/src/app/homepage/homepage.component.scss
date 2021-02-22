@@ -39,6 +39,37 @@
             -webkit-text-fill-color: transparent;
         }
     }
+    .rounded_lg_1 {
+        border-radius: 1em;
+    }
+    .transfer_table {
+        tbody {
+            th,
+            td {
+                &:not(:last-child):after {
+                    content: "";
+                    background: #636475;
+                    position: absolute;
+                    right: 0;
+                    width: 1px;
+                    height: 55%;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+.transfer_table {
+    tbody {
+        th,
+        td {
+            box-shadow: inset 0px 11px 10px -9px #aaabbd;
+            position: relative;
+        }
+    }
 }
 
 .down_angle {

@@ -1,7 +1,7 @@
 <div class="row mx-0 pt-5 primary-bg">
     <div class="row m-0 col-12 py-5">
         <div class="row m-0 py-5 w-100 align-items-center">
-            <div class="col-md-6 col-12">
+            <div class="col-md-6 col-12 pt-5">
                 <h2 class="text-capitalize text-white">Send money Abroad</h2>
                 <h1 class="font-weight-bold text-danger">Fastest</h1>
             </div>
@@ -87,44 +87,49 @@
         <div class="col-md-10 mx-auto mb-3 mt-5">
             <!-- <perfect-scrollbar> -->
             <div class="table-responsive">
-                <table class="table text-white rounded_1 grey-bg transfer_table">
-                    <thead>
+                <table class="table text-white rounded_lg_1 grey-bg transfer_table">
+                    <thead class="d-">
                         <tr>
-                            <th scope="col" class="align-middle border-0 font-9 p-3">
+                            <th scope="col" class="align-middle border-0 d-lg-table-cell d-none font-9 p-3">
                                 <span class="d-flex align-items-center">
                                     FX Rate
                                     <mat-icon class="ml-2 transition highlight-color">keyboard_arrow_up</mat-icon>
                                 </span>
                             </th>
-                            <th scope="col" class="align-middle border-0 font-9 p-3">Recipient gets <br>
+                            <th scope="col" class="align-middle border-0 d-lg-table-cell d-none font-9 p-3">Transfer through</th>
+                            <th scope="col" class="align-middle border-0 d-lg-table-cell d-none font-9 p-3">Recipient gets <br>
                                 <hr class="border-secondary my-1">
                                 <span class="d-flex align-item-center">
                                     Commision + Fees
                                     <mat-icon class="ml-2 transition highlight-color">keyboard_arrow_up</mat-icon>
                                 </span>
                             </th>
-                            <th scope="col" class="align-middle border-0 font-9 p-3">Transfer through</th>
-                            <th scope="col" class="align-middle border-0 font-9 p-3">Should arrived by</th>
-                            <th scope="col" class="align-middle border-0 font-9 p-3">Recipient gets <br>
+                            <th scope="col" class="align-middle border-0 d-lg-table-cell d-none font-9 p-3">Should arrived by</th>
+                            <th scope="col" class="align-middle border-0 d-lg-table-cell d-none font-9 p-3">Recipient gets <br>
                                 <hr class="border-secondary my-1">
                                 <span class="d-flex align-item-center">
                                     Commision + Fees
                                     <mat-icon class="ml-2 transition highlight-color">keyboard_arrow_up</mat-icon>
                                 </span>
                             </th>
-                            <th class="border-0"></th>
+                            <th class="border-0 d-lg-table-cell d-none"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let item of platforms">
-                            <th scope="row" class="border-0 align-middle p-4">{{item.fx_rate}}</th>
-                            <td class="border-0 align-middle p-4">{{item.reciepient_percentage}}</td>
+                            <th scope="row" class="border-0 align-middle d-lg-table-cell d-none p-4">{{item.fx_rate}}</th>
                             <td class="border-0 align-middle p-4">
                                 <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="o-contain platform_logo mw-80px mx-auto">
                             </td>
-                            <td class="border-0 align-middle p-4">{{item.day}}</td>
-                            <td class="border-0 align-middle p-4">${{item.reciepient_amount}}</td>
-                            <td class="border-0 align-middle p-4"><a href="javascript:void(0)" class="text-decoration-none d-inline-flex navigate_hover font-weight-bold align-items-center text-white">
+                            <td class="border-0 align-middle text-right p-4">
+                                <span class="border-bottom border-secondary pb-1">{{item.reciepient_percentage}}</span>
+                                <span class="d-flex justify-content-end align-item-center mt-2">
+                                    {{item.commision_percentage}}%
+                                </span>
+                            </td>
+                            <td class="border-0 align-middle d-lg-table-cell d-none p-4">{{item.day}}</td>
+                            <td class="border-0 align-middle d-lg-table-cell d-none p-4">${{item.reciepient_amount}}</td>
+                            <td class="border-0 align-middle d-lg-table-cell d-none p-4"><a href="javascript:void(0)" class="text-decoration-none d-inline-flex navigate_hover font-weight-bold align-items-center text-white">
                                 Transfer Now <mat-icon class="ml-2 transition">navigate_next</mat-icon>
                             </a></td>
                         </tr>
@@ -140,31 +145,31 @@
             <div class="row align-items-center m-0 text-white steps">
                 <div class="w-lg-20 col-12 mx-auto text-center px-3 position-relative">
                     <p>
-                        <img src="canny/dist/user-app/assets/dollar.svg" alt="" width="40" />
+                        <img src="../../assets/dollar.svg" alt="" width="40" />
                     </p>
                     <p class="font-9">Enter an amount to send</p>
                 </div>
                 <div class="w-lg-20 col-12 mx-auto text-center px-3 position-relative">
                     <p>
-                        <img src="canny/dist/user-app/assets/rating.svg" alt="" width="40" />
+                        <img src="../../assets/rating.svg" alt="" width="40" />
                     </p>
                     <p class="font-9">Choose the best provider</p>
                 </div>
                 <div class="w-lg-20 col-12 mx-auto text-center px-3 position-relative">
                     <p>
-                        <img src="canny/dist/user-app/assets/add.svg" alt="" width="40" />
+                        <img src="../../assets/add.svg" alt="" width="40" />
                     </p>
                     <p class="font-9">Add recipient details</p>
                 </div>
                 <div class="w-lg-20 col-12 mx-auto text-center px-3 position-relative">
                     <p>
-                        <img src="canny/dist/user-app/assets/user.svg" alt="" width="40" />
+                        <img src="../../assets/user.svg" alt="" width="40" />
                     </p>
                     <p class="font-9">Verify your identity or Unique Identifier</p>
                 </div>
                 <div class="w-lg-20 col-12 mx-auto text-center px-3 position-relative">
                     <p>
-                        <img src="canny/dist/user-app/assets/credit-card.svg" alt="" width="40" />
+                        <img src="../../assets/credit-card.svg" alt="" width="40" />
                     </p>
                     <p class="font-9">Pay for Transfer</p>
                 </div>

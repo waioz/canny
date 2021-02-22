@@ -142,27 +142,6 @@ body {
     border-radius: 1em;
 }
 
-.transfer_table {
-    tbody {
-        th,
-        td {
-            box-shadow: inset 0px 11px 10px -9px #aaabbd;
-            position: relative;
-            &:not(:last-child):after {
-                content: "";
-                background: #636475;
-                position: absolute;
-                right: 0;
-                width: 1px;
-                height: 55%;
-                top: 0;
-                bottom: 0;
-                margin: auto;
-            }
-        }
-    }
-}
-
 .sidenav {
     max-height: calc(100vh - 120px);
     overflow: auto;
@@ -170,4 +149,8 @@ body {
 
 .mat-drawer-inner-container {
     height: auto !important;
+}
+
+.sidenav_logo {
+    filter: brightness(0.5);
 }
