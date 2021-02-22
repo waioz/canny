@@ -8,7 +8,7 @@ const cwd = process.cwd();
 app.use(express.static('./dist/user-app'));
 
 console.log("run")
-app.get('/', (req, res) => {
+app.get('/', async(req, res) => {
     console.log("req")
     try {
         console.log("try")
