@@ -39,11 +39,16 @@ app.use(async (req, res, next) => {
             if (typeof pathImage !== "undefined") {
                 const pathImage = uriArray[2];
                 const extension = pathImage.split('.').pop();
-                const contentType = 'image/' + extension;
-                const file = cwd + '/dist/user-app/' + url;
-                fileToLoad = fs.readFileSync(file);
-                res.writeHead(200, { 'Content-Type': contentType });
-                return res.end(fileToLoad, 'binary');
+                if(extension == 'svg') {
+                    return res.sendFile(cwd, + '/dist/user-app/' + pathImage);
+                }
+                else {
+                    const contentType = 'image/' + extension;
+                    const file = cwd + '/dist/user-app/' + url;
+                    fileToLoad = fs.readFileSync(file);
+                    res.writeHead(200, { 'Content-Type': contentType });
+                    return res.end(fileToLoad, 'binary');
+                }
             }
         } else {
             try {
