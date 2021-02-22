@@ -1,24 +1,32 @@
-//Install express server
-const express = require('express');
+/* For env file function */
+const dotenv = require('dotenv');
+dotenv.config();
 
-const app = express();
-const cwd = process.cwd();
+if (!process.env.HTTP_HOST) {
+    console.log('Please configure env file.')
+    console.log('Copy .env.default to .env and configure the values.')
+    return
+}
 
-// Serve only the static files form the dist directory
-app.use(express.static('./dist/user-app'));
+const fs = require('fs');
+if (process.env.HTTPS == "true") {
+    var http = require('https');
+    var options = {
+        key: fs.readFileSync(process.env.HTTPS_KEY),
+        cert: fs.readFileSync(process.env.HTTPS_CERT)
+    };
 
-console.log("run")
-app.get('/', async(req, res) => {
-    console.log("req")
-    try {
-        console.log("try")
-        var text = await readFile(cwd + '/dist/user-app/index.html', 'utf8')
-        return res.send(text)
-    } catch (error) {
-        console.log("cache")
-        return res.send(error.message)
-    }
-});
+}
+else {
+    var http = require('http');
+    var options = {};
+}
 
-// Start the app by listening on the default Heroku port
-app.listen(process.env.HTTP_PORT || 8080);
+const app = require('./node_app/app');
+
+const httpHost = process.env.HTTP_HOST || 'localhost';
+const httpPort = process.env.HTTP_PORT || 8000;
+
+const server = http.createServer(options, app);
+server.listen(httpPort, httpHost);
+console.log('Server listening on ' + httpHost + ':' + httpPort)
