@@ -40,7 +40,11 @@ app.use(async (req, res, next) => {
                 const pathImage = uriArray[2];
                 const extension = pathImage.split('.').pop();
                 if(extension == 'svg') {
-                    return res.sendFile(cwd, + '/dist/user-app/' + pathImage);
+                    const contentType = 'image/svg+xml';
+                    const file = cwd + '/dist/user-app/' + url;
+                    fileToLoad = fs.readFileSync(file);
+                    res.writeHead(200, { 'Content-Type': contentType });
+                    return res.end(fileToLoad, 'binary');
                 }
                 else {
                     const contentType = 'image/' + extension;
