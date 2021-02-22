@@ -34,20 +34,16 @@ app.use(async (req, res, next) => {
         console.log("DFDFDF");
         const readFile = util.promisify(fs.readFile)
         if (uriArray[1] == "assets") {
-            const pathImage = uriArray[2];
-            var extension = pathImage.split('.').pop();
-            url = url.split('?');
-            url = url[0];
-            var extension_exp = extension.split('?');
-            if (extension_exp.length == 2) {
-                extension = extension_exp[0]
+            const pathImage = uriArray[3];
+            if (typeof pathImage !== "undefined") {
+                const pathImage = uriArray[3];
+                const extension = pathImage.split('.').pop();
+                const contentType = 'image/' + extension;
+                const file = cwd + '/dist/user-app/' + url;
+                fileToLoad = fs.readFileSync(file);
+                res.writeHead(200, { 'Content-Type': contentType });
+                return res.end(fileToLoad, 'binary');
             }
-            const contentType = 'image/' + extension;
-            const file = "." + url;
-            // console.log(file)
-            fileToLoad = fs.readFileSync(file);
-            res.writeHead(200, { 'Content-Type': contentType });
-            return res.end(fileToLoad, 'binary');
         } else {
             try {
                 var text = await readFile(cwd + '/dist/user-app/index.html', 'utf8')
