@@ -9,7 +9,7 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "heroku-postbuild": "ng build user-app --prod --deploy-url dist/user-app/"
+        "build-user-app": "ng build user-app --prod --deploy-url dist/user-app/"
     },
     "private": true,
     "dependencies": {

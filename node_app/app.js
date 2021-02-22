@@ -53,6 +53,7 @@ app.use(async (req, res, next) => {
                 var text = await readFile(cwd + '/dist/user-app/index.html', 'utf8')
                 return res.send(text)
             } catch (error) {
+                console.log(error);
                 return res.send(error.message)
             }
         }
