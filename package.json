@@ -3,14 +3,13 @@
     "version": "0.0.0",
     "scripts": {
         "ng": "./node_modules/@angular/cli/bin/ng",
-        "start": "ng serve",
-        "serve": "node server.js",
+        "serve": "ng serve",
+        "start": "node server.js",
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "build-user-app": "ng build user-app --prod --deploy-url dist/user-app/",
-        "build-admin-app": "ng build admin-app --prod --deploy-url dist/admin-app/"
+        "heroku-postbuild": "ng build user-app --prod --deploy-url dist/user-app"
     },
     "private": true,
     "dependencies": {
