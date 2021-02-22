@@ -9,8 +9,8 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "build-user-app": "ng build user-app --prod --deploy-url canny/dist/user-app/",
-        "build-admin-app": "ng build admin-app --prod --deploy-url admin-app/"
+        "build-user-app": "ng build user-app --prod --deploy-url dist/user-app/",
+        "build-admin-app": "ng build admin-app --prod --deploy-url dist/admin-app/"
     },
     "private": true,
     "dependencies": {
