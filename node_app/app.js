@@ -50,7 +50,7 @@ app.use(async (req, res, next) => {
             return res.end(fileToLoad, 'binary');
         } else {
             try {
-                var text = await readFile(cwd + '/dist/user-app/index.html', 'utf8')
+                var text = await readFile(cwd + '/user-app/index.html', 'utf8')
                 return res.send(text)
             } catch (error) {
                 console.log(error);
