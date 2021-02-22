@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 });
 
 
-app.use(express.static(cwd + '/dist/user-app'));
+app.use(express.static(cwd + '/dist/user-app/'));
 app.use(express.static(cwd + '/assets'));
 app.use(async (req, res, next) => {
     var url = req.url;
