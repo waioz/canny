@@ -34,9 +34,10 @@ app.use(async (req, res, next) => {
         console.log("DFDFDF");
         const readFile = util.promisify(fs.readFile)
         if (uriArray[1] == "assets") {
-            const pathImage = uriArray[3];
+            console.log(uriArray)
+            const pathImage = uriArray[2];
             if (typeof pathImage !== "undefined") {
-                const pathImage = uriArray[3];
+                const pathImage = uriArray[2];
                 const extension = pathImage.split('.').pop();
                 const contentType = 'image/' + extension;
                 const file = cwd + '/dist/user-app/' + url;
