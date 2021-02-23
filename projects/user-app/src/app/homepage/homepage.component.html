@@ -1,9 +1,9 @@
 <div class="row mx-0 pt-5 primary-bg">
     <div class="row m-0 col-12 py-5">
-        <div class="row m-0 py-5 w-100 align-items-center">
+        <div class="row m-0 py-lg-5 w-100 align-items-center">
             <div class="col-md-6 col-12 pt-5">
                 <h2 class="text-capitalize text-white">Send money Abroad</h2>
-                <h1 class="font-weight-bold text-danger">Fastest</h1>
+                <h1 class="font-weight-bold text-danger mb-4">Fastest</h1>
             </div>
             <div class="col-md-5 col-lg-3 ml-auto">
                 <div class="col-12 p-3 currency_section text-center">
@@ -90,8 +90,7 @@
                 <table class="table text-white rounded_lg_1 grey-bg transfer_table">
                     <thead class="">
                         <tr>
-                            <th scope="col" class="align-middle border-0 font-9 p-3">
-                                <span class="border-bottom border-secondary d-lg-none pb-1">Transfer through</span>
+                            <th scope="col" class="align-middle border-0 d-lg-table-cell d-none font-9 p-3">
                                 <span class="d-flex align-items-center mt-2 mt-lg-0">
                                         <span>FX Rate</span>
                                 <mat-icon class="ml-2 transition highlight-color">keyboard_arrow_up</mat-icon>
@@ -118,20 +117,19 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let item of platforms" class="transition">
-                            <th scope="row" class="border-0 align-middle d-lg-table-cell d-none p-lg-4 p-3">{{item.fx_rate}}</th>
-                            <td class="border-0 align-middle p-lg-4 p-3">
+                            <td data-label="Fx Rate" scope="row" class="border-0 align-middle position-relative p-lg-4">{{item.fx_rate}}</td>
+                            <td data-label="Transfer through" class="border-0 align-middle position-relative p-lg-4">
                                 <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="o-contain platform_logo mw-80px mx-auto">
-                                <span class="d-lg-none d-block">{{item.fx_rate}}</span>
                             </td>
-                            <td class="border-0 align-middle text-right p-lg-4 p-3">
+                            <td data-label="Recipient gets" class="border-0 align-middle position-relative text-lg-right p-lg-4">
                                 <span class="border-bottom border-secondary pb-1">{{item.reciepient_percentage}}</span>
-                                <span class="d-flex justify-content-end align-item-center mt-2">
+                                <span class="d-flex justify-content-lg-end align-item-center mt-2">
                                     {{item.commision_percentage}}%
                                 </span>
                             </td>
-                            <td class="border-0 align-middle p-lg-4 p-3">{{item.day}}</td>
-                            <td class="border-0 align-middle d-lg-table-cell d-none p-lg-4 p-3">${{item.reciepient_amount}}</td>
-                            <td class="border-0 align-middle d-lg-table-cell d-none p-lg-4 p-3"><a href="javascript:void(0)" class="text-decoration-none d-inline-flex navigate_hover font-weight-bold align-items-center text-white">
+                            <td data-label="Should arrived by" class="border-0 align-middle position-relative p-lg-4">{{item.day}}</td>
+                            <td data-label="Recipient gets" class="border-0 align-middle position-relative p-lg-4">${{item.reciepient_amount}}</td>
+                            <td class="border-0 align-middle position-relative p-lg-4"><a href="javascript:void(0)" class="text-decoration-none d-inline-flex navigate_hover font-weight-bold align-items-center text-white">
                                 Transfer Now <mat-icon class="ml-2 transition">navigate_next</mat-icon>
                             </a></td>
                         </tr>
@@ -143,7 +141,7 @@
     </div>
     <div class="col-12 mb-5">
         <div class="col-md-10 mx-auto mb-3 mt-5">
-            <h1 class="text-center mb-5 text-white font-weight-bold"><span class="highlight-color">5 Easy</span> Steps</h1>
+            <h1 class="text-center mb-5 text-white font-weight-bold"><span class="text-danger">5 Easy</span> Steps</h1>
             <div class="row align-items-center m-0 text-white steps">
                 <div class="w-lg-20 col-12 mx-auto text-center px-3 position-relative">
                     <p>

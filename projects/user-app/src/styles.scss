@@ -161,11 +161,17 @@ body {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .navbar-header {
         .logo {
-            max-width: 60px;
+            max-width: 55px;
         }
+    }
+}
+
+@media (min-width: 1000px) {
+    .mat-form-field-appearance-fill .mat-form-field-infix {
+        padding: 0
     }
 }
 
@@ -261,10 +267,6 @@ body {
     }
 }
 
-.mat-form-field-appearance-fill .mat-form-field-infix {
-    padding: 0
-}
-
 .navigation {
     transform: translateX(200%);
     &.slideLeft {
@@ -275,5 +277,44 @@ body {
         &:hover {
             color: #dc3545;
         }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50% !important;
+    }
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 12px;
+        left: 12px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        content: attr(data-label);
+        float: left;
     }
 }
