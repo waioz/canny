@@ -81,3 +81,13 @@
     transform: rotate(270deg);
     width: auto;
 }
+
+.transfer_table {
+    tbody {
+        tr {
+            &:hover {
+                background: linear-gradient(to bottom right, #AF7C4E, #6b2d52);
+            }
+        }
+    }
+}

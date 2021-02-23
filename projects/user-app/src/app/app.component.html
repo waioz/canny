@@ -6,17 +6,17 @@
         <perfect-scrollbar>
             <ul class="list-unstyled sidenav col-12 pb-5">
                 <li>
-                    <a href="javascript:void(0)" class="text-decoration-none highlight-color d-inline-flex p-2">Register</a>
+                    <a href="javascript:void(0)" class="text-decoration-none highlight-color transition d-inline-flex p-2">Register</a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)" class="text-decoration-none highlight-color d-inline-flex p-2">Login</a>
+                    <a href="javascript:void(0)" class="text-decoration-none highlight-color transition d-inline-flex p-2">Login</a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)" class="text-decoration-none highlight-color d-inline-flex p-2">Help</a>
+                    <a href="javascript:void(0)" class="text-decoration-none highlight-color transition d-inline-flex p-2">How it works</a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)" class="text-decoration-none mb-2 highlight-color d-inline-flex p-2">Money Transfer</a>
-                    <ul class="list-unstyled px-3">
+                    <a href="javascript:void(0)" class="text-decoration-none mb-2 highlight-color transition d-inline-flex p-2">Send Money</a>
+                    <!-- <ul class="list-unstyled px-3">
                         <li>
                             <a href="" class="d-flex text-decoration-none">
                                 <mat-icon class="mt-2 mr-2 primary-color font-9">navigate_next</mat-icon>
@@ -35,7 +35,7 @@
                                 </div>
                             </a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
             </ul>
         </perfect-scrollbar>
@@ -55,20 +55,39 @@
         <nav class="navbar navbar-default position-fixed w-100 t-0 z-index-2 primary-bg">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand font-weight-bold text-white" href="#"><img src="../assets/logo.png" alt="" width="100" class="mr-2">Canny</a>
+                    <a class="navbar-brand font-weight-bold text-white" href="#"><img src="../assets/logo.png" alt="" class="mr-2 logo">Canny</a>
                 </div>
                 <div class="ml-auto d-flex align-items-center">
+                    <span class="font-9 transition d-none d-lg-inline-flex navigation" [ngClass]="{slideLeft: is_menu}">
+                        <span class=" d-inline-flex mr-4">
+                            <a href="javascript:void(0)" class="text-decoration-none transition">Register</a>
+                        </span>
+                    <span class=" d-inline-flex mr-4">
+                            <a href="javascript:void(0)" class="text-decoration-none transition">Login</a>
+                        </span>
+                    <span class=" d-inline-flex mr-4">
+                            <a href="javascript:void(0)" class="text-decoration-none transition">How it Works</a>
+                        </span>
+                    <span class=" d-inline-flex mr-3">
+                            <a href="javascript:void(0)" class="text-decoration-none transition">Send Money</a>
+                        </span>
+                    </span>
                     <span class="text-white d-inline-flex mw-80px">
                         <mat-form-field appearance="fill" class="no_style w-100">
-                            <mat-select class="text-white font-9 font-weight-bold" [(ngModel)]="selectedLanguage">
+                            <mat-select class="text-white font-9" [(ngModel)]="selectedLanguage">
                                 <mat-option *ngFor="let language of languages" [value]="language">{{language}}</mat-option>
                             </mat-select>
                         </mat-form-field>
                     </span>
-                    <span>
-                        <a href="javascript:void(0)" class="text-white" (click)="drawer.toggle()" mat-raised-button>
+                    <span class="d-inline-flex d-lg-none">
+                        <a href="javascript:void(0)" class="text-white text-decoration-none" (click)="drawer.toggle()" mat-raised-button>
                             <mat-icon>segment</mat-icon>
                         </a>
+                    </span>
+                    <span class="d-lg-inline-flex d-none">
+                        <a href="javascript:void(0)" class="text-white menu_icon text-decoration-none" (click)="showMenu()" [ngClass]="{open: is_menu}" mat-raised-button>
+                            <span></span><span></span><span></span>
+                    </a>
                     </span>
                 </div>
             </div>

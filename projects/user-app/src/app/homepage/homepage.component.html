@@ -49,7 +49,7 @@
                             </mat-form-field>
                         </div>
                     </div>
-                    <a href="javascript:void(0)" class="highlight-color font-weight-bold d-inline-flex text-decoration-none transition">Get Started <mat-icon>keyboard_arrow_right</mat-icon></a>
+                    <a href="javascript:void(0)" class="highlight-color font-weight-bold d-inline-flex navigate_hover text-decoration-none transition">Get Started <mat-icon class="transition">keyboard_arrow_right</mat-icon></a>
                 </div>
             </div>
         </div>
@@ -88,12 +88,13 @@
             <!-- <perfect-scrollbar> -->
             <div class="table-responsive">
                 <table class="table text-white rounded_lg_1 grey-bg transfer_table">
-                    <thead class="d-">
+                    <thead class="">
                         <tr>
-                            <th scope="col" class="align-middle border-0 d-lg-table-cell d-none font-9 p-3">
-                                <span class="d-flex align-items-center">
-                                    FX Rate
-                                    <mat-icon class="ml-2 transition highlight-color">keyboard_arrow_up</mat-icon>
+                            <th scope="col" class="align-middle border-0 font-9 p-3">
+                                <span class="border-bottom border-secondary d-lg-none pb-1">Transfer through</span>
+                                <span class="d-flex align-items-center mt-2 mt-lg-0">
+                                        <span>FX Rate</span>
+                                <mat-icon class="ml-2 transition highlight-color">keyboard_arrow_up</mat-icon>
                                 </span>
                             </th>
                             <th scope="col" class="align-middle border-0 d-lg-table-cell d-none font-9 p-3">Transfer through</th>
@@ -116,20 +117,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let item of platforms">
-                            <th scope="row" class="border-0 align-middle d-lg-table-cell d-none p-4">{{item.fx_rate}}</th>
-                            <td class="border-0 align-middle p-4">
+                        <tr *ngFor="let item of platforms" class="transition">
+                            <th scope="row" class="border-0 align-middle d-lg-table-cell d-none p-lg-4 p-3">{{item.fx_rate}}</th>
+                            <td class="border-0 align-middle p-lg-4 p-3">
                                 <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="o-contain platform_logo mw-80px mx-auto">
+                                <span class="d-lg-none d-block">{{item.fx_rate}}</span>
                             </td>
-                            <td class="border-0 align-middle text-right p-4">
+                            <td class="border-0 align-middle text-right p-lg-4 p-3">
                                 <span class="border-bottom border-secondary pb-1">{{item.reciepient_percentage}}</span>
                                 <span class="d-flex justify-content-end align-item-center mt-2">
                                     {{item.commision_percentage}}%
                                 </span>
                             </td>
-                            <td class="border-0 align-middle d-lg-table-cell d-none p-4">{{item.day}}</td>
-                            <td class="border-0 align-middle d-lg-table-cell d-none p-4">${{item.reciepient_amount}}</td>
-                            <td class="border-0 align-middle d-lg-table-cell d-none p-4"><a href="javascript:void(0)" class="text-decoration-none d-inline-flex navigate_hover font-weight-bold align-items-center text-white">
+                            <td class="border-0 align-middle p-lg-4 p-3">{{item.day}}</td>
+                            <td class="border-0 align-middle d-lg-table-cell d-none p-lg-4 p-3">${{item.reciepient_amount}}</td>
+                            <td class="border-0 align-middle d-lg-table-cell d-none p-lg-4 p-3"><a href="javascript:void(0)" class="text-decoration-none d-inline-flex navigate_hover font-weight-bold align-items-center text-white">
                                 Transfer Now <mat-icon class="ml-2 transition">navigate_next</mat-icon>
                             </a></td>
                         </tr>

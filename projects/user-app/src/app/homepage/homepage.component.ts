@@ -23,10 +23,11 @@ export class HomepageComponent implements OnInit {
     margin: 40,
     stagePadding: 30,
     navSpeed: 700,
-    navText: ['Previous', 'Next'],
+    navText: ['<i class="fa fa-angle-left">', '<i class="fa fa-angle-right">'],
     responsive: {
       0: {
-        items: 1
+        items: 1,
+        nav: true
       },
       400: {
         items: 2

@@ -34,7 +34,7 @@ body {
 .highlight-color {
     color: #EA4855;
     &:hover {
-        color: #EA4855;
+        color: $primary;
     }
 }
 
@@ -153,4 +153,127 @@ body {
 
 .sidenav_logo {
     filter: brightness(0.5);
+}
+
+.navbar-header {
+    .logo {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar-header {
+        .logo {
+            max-width: 60px;
+        }
+    }
+}
+
+.platform_slider .owl-nav [class*=owl-] {
+    &.owl-prev {
+        left: -27px;
+    }
+    &.owl-next {
+        right: -27px;
+    }
+    &:hover {
+        background: transparent;
+    }
+    background: transparent;
+    font-size: 2em;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.menu_icon {
+    width: 25px;
+    height: 20px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    span {
+        display: block;
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background: #fff;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+        &:nth-child(1) {
+            top: 0px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+        }
+        &:nth-child(2) {
+            top: 8px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+        }
+        &:nth-child(3) {
+            top: 16px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+        }
+    }
+    &.open span:nth-child(1) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 1px;
+        left: -1px;
+    }
+    &.open span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+    }
+    &.open span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        top: 18px;
+        left: -1px;
+    }
+}
+
+.mat-form-field-appearance-fill .mat-form-field-infix {
+    padding: 0
+}
+
+.navigation {
+    transform: translateX(200%);
+    &.slideLeft {
+        transform: translateX(0);
+    }
+    a {
+        color: #fff;
+        &:hover {
+            color: #dc3545;
+        }
+    }
 }

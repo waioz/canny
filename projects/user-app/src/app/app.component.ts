@@ -13,4 +13,8 @@ export class AppComponent {
   selectedLanguage = "EN";
   languages = ['EN', 'GR']
   title = 'user-app';
+  is_menu:Boolean = false;
+  showMenu() {
+    this.is_menu = !this.is_menu
+  }
 }
