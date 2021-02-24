@@ -157,7 +157,7 @@ body {
 
 .navbar-header {
     .logo {
-        max-width: 100px;
+        max-width: 80px;
     }
 }
 
@@ -296,6 +296,9 @@ body {
         top: -9999px;
         left: -9999px;
     }
+    tbody tr {
+        padding: 2em 0 0.5em;
+    }
     td {
         /* Behave  like a "row" */
         border: none;
@@ -316,5 +319,34 @@ body {
         text-overflow: ellipsis;
         content: attr(data-label);
         float: left;
+    }
+    .transfer_from_logo {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        padding: 0.7em !important;
+        right: 0;
+        text-align: center;
+        >a {
+            >span {
+                display: none;
+            }
+        }
+        &.vertical {
+            top: 50%;
+            transform: translateY(-50%);
+            margin: auto;
+            right: 0;
+            left: auto;
+            .mat-icon {
+                background: -webkit-linear-gradient(#eee, #dc3545);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 3em;
+                width: auto;
+                height: auto;
+            }
+        }
     }
 }
