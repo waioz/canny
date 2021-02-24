@@ -4,7 +4,31 @@
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 @import '~perfect-scrollbar/css/perfect-scrollbar.css';
 $primary: #24273A;
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@font-face {
+    font-family: "Helvetica";
+    src: url("./assets/fonts/Helvetica.ttf");
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url("./assets/fonts/helvetica-light.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url("./assets/fonts/Helvetica-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url("./assets/fonts/helvetica-rounded-bold.otf");
+    font-weight: 800;
+}
+
+$font-name: 'Helvetica';
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 html,
 body {
     height: 100%;
@@ -12,7 +36,12 @@ body {
 
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font-name;
+}
+
+.mat-form-field,
+.mat-select {
+    font-family: $font-name;
 }
 
 .l-0 {
@@ -128,6 +157,11 @@ body {
     }
     .active.center {
         transform: scale(1.1);
+        >p {
+            color: #EA4855 !important;
+            font-size: 1.3em;
+            margin-bottom: 0.5em;
+        }
         .border-gradient {
             background: transparent;
         }
@@ -298,6 +332,9 @@ body {
     }
     tbody tr {
         padding: 2em 0 0.5em;
+        &:first-child {
+            box-shadow: none !important;
+        }
     }
     td {
         /* Behave  like a "row" */

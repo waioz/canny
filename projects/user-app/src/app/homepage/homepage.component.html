@@ -2,7 +2,7 @@
     <div class="row m-0 col-12 py-5">
         <div class="row m-0 py-lg-5 w-100 align-items-center">
             <div class="col-md-6 col-12 pt-5">
-                <h2 class="text-capitalize text-white">Send money Abroad</h2>
+                <h2 class="text-capitalize text-white h1">Send money Abroad</h2>
                 <h1 class="font-weight-bold text-danger mb-4">Fastest</h1>
             </div>
             <div class="col-md-5 col-lg-3 ml-auto">
@@ -10,7 +10,7 @@
                     <div class="row m-0">
                         <div class="col-md-4 col-5 p-0 mx-auto">
                             <mat-form-field appearance="fill" class="no_style w-100">
-                                <mat-select class="text-white" [(ngModel)]="selectedCurrencySend">
+                                <mat-select class="text-white font-weight-bold" [(ngModel)]="selectedCurrencySend">
                                     <mat-option>None</mat-option>
                                     <mat-option *ngFor="let currency of currencies" [value]="currency">{{currency}}</mat-option>
                                 </mat-select>
@@ -20,7 +20,7 @@
                             <mat-form-field appearance="legacy" class="no_style_input text-right w-100">
                                 <mat-label class="font-9">You Send</mat-label>
                                 <span matPrefix class="text-white">$ &nbsp;</span>
-                                <input autocomplete="off" class="text-white" matInput>
+                                <input autocomplete="off" class="text-white font-weight-bold" matInput>
                             </mat-form-field>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                     <div class="row mx-0">
                         <div class="col-md-4 col-5 p-0 mx-auto">
                             <mat-form-field appearance="fill" class="no_style w-100">
-                                <mat-select class="text-white" [(ngModel)]="selectedCurrencyReceive">
+                                <mat-select class="text-white font-weight-bold" [(ngModel)]="selectedCurrencyReceive">
                                     <mat-option>None</mat-option>
                                     <mat-option *ngFor="let currency of currencies" [value]="currency">{{currency}}</mat-option>
                                 </mat-select>
@@ -45,7 +45,7 @@
                             <mat-form-field appearance="legacy" class="no_style_input text-right w-100">
                                 <mat-label class="font-9">Recipient Gets</mat-label>
                                 <span matPrefix class="text-white">$ &nbsp;</span>
-                                <input autocomplete="off" class="text-white" matInput>
+                                <input autocomplete="off" class="text-white font-weight-bold" matInput>
                             </mat-form-field>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
         <div class="col-md-9 mx-auto">
             <owl-carousel-o [options]="customOptions" class="platform_slider">
                 <ng-template carouselSlide *ngFor="let item of platforms" [id]="item.id" class="py-5">
-                    <p class="text-white text-center">{{item.type}}</p>
+                    <p class="text-white text-center font-weight-bold">{{item.type}}</p>
                     <div class="border-gradient p-3 primary-bg position-relative">
                         <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="mb-2 o-contain platform_logo mw-80px mx-auto">
                         <div class="row m-0">
@@ -155,31 +155,31 @@
                     <p>
                         <img src="../../assets/dollar.svg" alt="" width="40" />
                     </p>
-                    <p class="font-9">Enter an amount to send</p>
+                    <p class="">Enter an amount to send</p>
                 </div>
                 <div class="w-lg-20 col-12 mx-auto text-center px-3 position-relative">
                     <p>
                         <img src="../../assets/rating.svg" alt="" width="40" />
                     </p>
-                    <p class="font-9">Choose the best provider</p>
+                    <p class="">Choose the best provider</p>
                 </div>
                 <div class="w-lg-20 col-12 mx-auto text-center px-3 position-relative">
                     <p>
                         <img src="../../assets/add.svg" alt="" width="40" />
                     </p>
-                    <p class="font-9">Add recipient details</p>
+                    <p class="">Add recipient details</p>
                 </div>
                 <div class="w-lg-20 col-12 mx-auto text-center px-3 position-relative">
                     <p>
                         <img src="../../assets/user.svg" alt="" width="40" />
                     </p>
-                    <p class="font-9">Verify your identity or Unique Identifier</p>
+                    <p class="">Verify your identity or Unique Identifier</p>
                 </div>
                 <div class="w-lg-20 col-12 mx-auto text-center px-3 position-relative">
                     <p>
                         <img src="../../assets/credit-card.svg" alt="" width="40" />
                     </p>
-                    <p class="font-9">Pay for Transfer</p>
+                    <p class="">Pay for Transfer</p>
                 </div>
             </div>
         </div>

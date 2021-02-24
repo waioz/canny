@@ -39,9 +39,6 @@
             -webkit-text-fill-color: transparent;
         }
     }
-    .rounded_lg_1 {
-        border-radius: 1em;
-    }
     .transfer_table {
         tbody {
             th,
@@ -69,6 +66,10 @@
             position: relative;
         }
     }
+}
+
+.rounded_lg_1 {
+    border-radius: 1em;
 }
 
 .down_angle {
