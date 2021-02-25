@@ -468,7 +468,11 @@ body {
 }
 
 @media (max-width: 600px) {
-    * {
+    .left_title {
         font-size: 12px;
     }
+}
+
+mat-icon.mat-icon {
+    height: 28px;
 }
