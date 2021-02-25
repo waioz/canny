@@ -5,6 +5,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
@@ -12,13 +14,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HomepageRoutingModule } from './homepage-routing.module';
 import { HomepageComponent } from './homepage.component';
+import { RegisterComponent } from './register/register.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
 @NgModule({
-  declarations: [HomepageComponent],
+  declarations: [HomepageComponent, RegisterComponent],
   imports: [
     CommonModule,
     MatSelectModule,
@@ -30,6 +33,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ReactiveFormsModule,
     PerfectScrollbarModule,
     FontAwesomeModule,
+    MatDialogModule,
     CarouselModule
   ],
   providers: [

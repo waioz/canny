@@ -125,7 +125,9 @@ body {
 
 .currency_section {
     background-color: #5A5C6B;
+    box-shadow: inset 5px 3px 15px rgba(0, 0, 0, 0.4);
     border-radius: 2em;
+    max-width: 290px;
 }
 
 .z-index-1 {
@@ -364,10 +366,8 @@ body {
         padding: 0.7em !important;
         right: 0;
         text-align: center;
-        >a {
-            >span {
-                display: none;
-            }
+        .xs-none {
+            display: none;
         }
         &.vertical {
             top: 50%;
@@ -449,4 +449,26 @@ body {
     line-height: 22px;
     padding-left: 2.5em !important;
     border: 1px solid $primary;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.font_13 {
+    font-size: 1.3em;
+}
+
+.t-0 {
+    top: 0;
+}
+
+.overflow-visible {
+    overflow: visible;
+}
+
+@media (max-width: 600px) {
+    * {
+        font-size: 12px;
+    }
 }

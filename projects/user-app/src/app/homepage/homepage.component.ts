@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { faLongArrowAltDown, faLongArrowAltUp } from '@fortawesome/free-solid-svg-icons';
-
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { RegisterComponent } from './register/register.component';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -35,8 +36,11 @@ export class HomepageComponent implements OnInit {
       740: {
         items: 3
       },
-      940: {
-        items: 3
+      1600: {
+        items: 4
+      },
+      2000: {
+        items: 5
       }
     },
     nav: false
@@ -78,7 +82,7 @@ export class HomepageComponent implements OnInit {
     {
       id: '4',
       src: '../../assets/paypal_logo.png',
-      type: 'Fixed',
+      type: 'Fastest',
       reciepient_amount: 678.29,
       reciepient_percentage: 24.2,
       day: '1 day',
@@ -87,7 +91,7 @@ export class HomepageComponent implements OnInit {
       fx_rate: 1.3592
     },
   ]
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -97,5 +101,7 @@ export class HomepageComponent implements OnInit {
     this.selectedCurrencySend = this.selectedCurrencyReceive
     this.selectedCurrencyReceive = dummy
   }
-
+  openDialog(): void {
+    this.dialog.open(RegisterComponent);
+  }
 }
