@@ -1,7 +1,7 @@
-<div class="col-12 px-3 py-5 mt-5 bg-white">
-    <div class="d-flex mt-lg-5 pt-5">
+<div class="col-12 px-3 pb-3 bg-white">
+    <div class="d-flex pt-5">
         <div class="w-100 text-center path position-relative">
-            <a [routerLink]="['/register/business-detail']" routerLinkActive="active" class="text-decoration-none d-inline-block link">
+            <a class="text-decoration-none d-inline-block link active">
                 <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-2 btn-gradient">
                     <mat-icon class="">work</mat-icon>
                 </span>
@@ -9,7 +9,7 @@
             </a>
         </div>
         <div class="w-100 text-center path position-relative d-none d-lg-block">
-            <a [routerLink]="['/register/business-activity']" routerLinkActive="active" class="text-decoration-none d-inline-block link">
+            <a class="text-decoration-none d-inline-block link">
                 <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-2 btn-gradient">
                     <mat-icon class="">settings_suggest</mat-icon>
                 </span>
@@ -17,7 +17,7 @@
             </a>
         </div>
         <div class="w-100 text-center path position-relative d-none d-lg-block">
-            <a [routerLink]="['/register/share-holder']" routerLinkActive="active" class="text-decoration-none d-inline-block link">
+            <a class="text-decoration-none d-inline-block link">
                 <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-2 btn-gradient">
                     <mat-icon class="">groups</mat-icon>
                 </span>
@@ -25,7 +25,7 @@
             </a>
         </div>
         <div class="w-100 text-center path position-relative d-none d-lg-block">
-            <a [routerLink]="['/register/business-activity']" routerLinkActive="active" class="text-decoration-none d-inline-block link">
+            <a class="text-decoration-none d-inline-block link">
                 <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-2 btn-gradient">
                     <mat-icon class="">person</mat-icon>
                 </span>
@@ -33,18 +33,23 @@
             </a>
         </div>
     </div>
-    <div class="col-12 col-lg-6 mx-auto row m-0 text-center mt-lg-5 pt-4 px-0">
+    <div class="col-12 col-lg-10 mx-auto row m-0 text-center mt-lg-5 px-0">
         <h1 class="font-weight-bold w-100 gradient-text">Search for Business</h1>
-        <p class="w-100 text-body">Sole trader, free lancer or not registered with companies House ? Enter details here:</p>
+        <p class="w-100 text-body">Sole trader, free lancer or not registered with companies House ? Enter details here:
+        </p>
         <div class="col-12 p-3">
-            <span class="position-relative">
-                <input type="text" class="p-2 bg-white rounded font-9 gradient-input w-100 outline-none shadow-none" placeholder="Search for Business">
-                <span class="position-absolute l-0 t-0 p-2"><mat-icon class="bg-transparent">search</mat-icon></span>
+            <span class="position-relative d-block">
+                <input type="text" class="p-2 bg-white rounded font-9 gradient-input w-100 outline-none shadow-none"
+                    placeholder="Search for Business">
+                <span class="position-absolute l-0 t-0 p-2">
+                    <mat-icon class="bg-transparent">search</mat-icon>
+                </span>
             </span>
         </div>
         <div class="row m-0 align-items-center mt-4 link mx-auto">
-            <a href="javascript:void(0)" class="mr-4 d-flex align-items-center text-body">
-                <mat-icon>keyboard_arrow_left</mat-icon> Previous</a>
+            <a href="javascript:void(0)" class="mr-4 d-flex align-items-center text-decoration-none text-body">
+                <mat-icon>keyboard_arrow_left</mat-icon> Previous
+            </a>
             <button type="button" class="btn btn-gradient rounded transition text-white p-2 shadow-none outline-none">Continue</button>
         </div>
     </div>
