@@ -344,11 +344,9 @@ body {
         border-bottom: 1px solid #eee;
         position: relative;
         padding-left: 50% !important;
-        &.font-bigger {
-            &:before {
-                font-size: 1.2em;
-                font-weight: bold;
-            }
+        .font-bigger {
+            font-size: 1.2em;
+            font-weight: bold;
         }
     }
     td:before {
