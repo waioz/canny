@@ -387,3 +387,66 @@ body {
         }
     }
 }
+
+.link {
+    .btn-gradient {
+        background: linear-gradient(to bottom right, #EC9156, #D3545F);
+        padding: 2px;
+        &:hover {
+            background: linear-gradient(to bottom right, #D3545F, #EC9156);
+        }
+        .mat-icon {
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1em;
+            color: $primary;
+            z-index: 1;
+        }
+    }
+    &.active {
+        .btn-gradient {
+            .mat-icon {
+                background: linear-gradient(to bottom right, #EC9156, #D3545F);
+                color: #fff;
+            }
+        }
+    }
+}
+
+.w-50x {
+    width: 50px;
+}
+
+.h-50x {
+    height: 50px;
+}
+
+.path:not(:last-child):after {
+    content: "";
+    background: #ccc;
+    position: absolute;
+    top: 25px;
+    height: 2px;
+    width: 100%;
+    left: 50%;
+}
+
+.outline-none {
+    outline: none;
+}
+
+.gradient-text {
+    background: -webkit-linear-gradient(#EC9156, #D3545F);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-input {
+    line-height: 22px;
+    padding-left: 2.5em !important;
+    border: 1px solid $primary;
+}

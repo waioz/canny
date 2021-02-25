@@ -74,7 +74,7 @@
                             <p class="text-white font-weight-bold w-100">{{item.day}}</p>
                         </div>
                         <div class="col-12 p-0 text-center">
-                            <a href="javascript:void(0)" class="text-decoration-none d-inline-flex navigate_hover font-weight-bold align-items-center text-white">
+                            <a [routerLink]="['/register/business-detail']" routerLinkActive="router-link-active" class="text-decoration-none d-inline-flex navigate_hover font-weight-bold align-items-center text-white">
                                 Transfer Now <mat-icon class="ml-2 transition">navigate_next</mat-icon>
                             </a>
                         </div>
@@ -135,7 +135,7 @@
                             <td data-label="Should arrived by" class="border-0 align-middle position-relative p-lg-4">{{item.day}}</td>
                             <td data-label="Recipient gets" class="border-0 align-middle position-relative p-lg-4">${{item.reciepient_amount}}</td>
                             <td class="border-0 align-middle position-relative p-lg-4 vertical transfer_from_logo">
-                                <a href="javascript:void(0)" class="text-decoration-none d-inline-flex navigate_hover font-weight-bold align-items-center text-white">
+                                <a [routerLink]="['/register/business-detail']" routerLinkActive="router-link-active" class="text-decoration-none d-inline-flex navigate_hover font-weight-bold align-items-center text-white">
                                     <span>Transfer Now</span>
                                     <mat-icon class="ml-2 transition">navigate_next</mat-icon>
                                 </a>
