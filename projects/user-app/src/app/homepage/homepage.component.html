@@ -1,16 +1,20 @@
-<div class="row mx-0 pt-5 primary-bg">
+<div class="row mx-0 pt-5 bg-gradient">
     <div class="row m-0 container mx-auto pt-5">
         <div class="row m-0 py-lg-5 w-100 align-items-center mb-5 mb-lg-0">
             <div class="col-md-6 col-12 pt-5 left_title">
-                <h2 class="text-capitalize text-white h1 fa-3x">Send money Abroad</h2>
-                <h1 class="font-weight-bold text-danger mb-4 fa-4x">Fastest</h1>
+                <h2 class="text-capitalize text-body fa-3x">Send money Abroad.</h2>
+                <h1 class="font-weight-bold text-orange mb-4 fa-5x">
+                    <div class="rw-words">
+                        <span>Fastest</span><span>Cheapest</span><span>Best</span>
+                    </div>
+                </h1>
             </div>
             <div class="col-md-5 col-lg-4 ml-auto mt-4 mt-md-0">
-                <div class="col-12 p-3 currency_section text-center mx-auto">
+                <div class="col-12 px-4 pt-5 pb-4 currency_section text-center mx-auto">
                     <div class="row m-0">
                         <div class="col-md-4 col-5 p-0 mx-auto">
                             <mat-form-field appearance="fill" class="no_style w-100">
-                                <mat-select class="text-white font-weight-bold" [(ngModel)]="selectedCurrencySend">
+                                <mat-select class="font-weight-bold" [(ngModel)]="selectedCurrencySend">
                                     <mat-option>None</mat-option>
                                     <mat-option *ngFor="let currency of currencies" [value]="currency">{{currency}}</mat-option>
                                 </mat-select>
@@ -19,23 +23,23 @@
                         <div class="col-md-6 col-7 mx-auto">
                             <mat-form-field appearance="legacy" class="no_style_input text-right w-100">
                                 <mat-label class="font-9">You Send</mat-label>
-                                <span matPrefix class="text-white">$ &nbsp;</span>
-                                <input autocomplete="off" class="text-white font-weight-bold" matInput>
+                                <span matPrefix class="">$ &nbsp;</span>
+                                <input autocomplete="off" class="font-weight-bold font_13" matInput>
                             </mat-form-field>
                         </div>
                     </div>
-                    <div class="col-12 align-items-center justify-content-center my-4">
-                        <a href="javascript:void(0)" class="highlight-color text-decoration-none mr-1" (click)="changeCurrency()">
-                            <fa-icon class="" size="lg" [icon]="faLongArrowAltDown"></fa-icon>
+                    <div class="align-items-center col-12 justify-content-center mt-3 py-4 rotate_arrow">
+                        <a href="javascript:void(0)" class="font_13 text-grey text-decoration-none mr-3" (click)="changeCurrency()">
+                            <mat-icon class="text-orange fa-2x">arrow_right_alt</mat-icon>
                         </a>
-                        <a href="javascript:void(0)" class="highlight-color text-decoration-none" (click)="changeCurrency()">
-                            <fa-icon class="" size="lg" [icon]="faLongArrowAltUp"></fa-icon>
+                        <a href="javascript:void(0)" class="font_13 text-grey text-decoration-none" (click)="changeCurrency()">
+                            <mat-icon class="text-orange fa-2x">arrow_right_alt</mat-icon>
                         </a>
                     </div>
-                    <div class="row mx-0">
+                    <div class="row mx-0 mb-3">
                         <div class="col-md-4 col-5 p-0 mx-auto">
                             <mat-form-field appearance="fill" class="no_style w-100">
-                                <mat-select class="text-white font-weight-bold" [(ngModel)]="selectedCurrencyReceive">
+                                <mat-select class=" font-weight-bold" [(ngModel)]="selectedCurrencyReceive">
                                     <mat-option>None</mat-option>
                                     <mat-option *ngFor="let currency of currencies" [value]="currency">{{currency}}</mat-option>
                                 </mat-select>
@@ -44,40 +48,46 @@
                         <div class="col-md-6 col-7 mx-auto">
                             <mat-form-field appearance="legacy" class="no_style_input text-right w-100">
                                 <mat-label class="font-9">Recipient Gets</mat-label>
-                                <span matPrefix class="text-white">$ &nbsp;</span>
-                                <input autocomplete="off" class="text-white font-weight-bold" matInput>
+                                <span matPrefix class="">$ &nbsp;</span>
+                                <input autocomplete="off" class=" font-weight-bold font_13" matInput>
                             </mat-form-field>
                         </div>
                     </div>
-                    <a href="javascript:void(0)" class="highlight-color mt-2 mb-2 font-weight-bold d-inline-flex navigate_hover text-decoration-none transition align-items-center">Get Started <mat-icon class="transition">keyboard_arrow_right</mat-icon></a>
+                    <a href="javascript:void(0)" class="mt-2 mb-2 font-weight-bold d-inline-flex navigate_hover px-4 py-2 text-decoration-none transition align-items-center">Get Started <mat-icon class="transition ml-2">keyboard_arrow_right</mat-icon></a>
                 </div>
             </div>
         </div>
     </div>
     <div class="col-12 m-0">
         <div class="container mx-auto">
-            <div class="col-md-10 mx-auto">
+            <div class="mx-auto">
                 <owl-carousel-o [options]="customOptions" class="platform_slider">
                     <ng-template carouselSlide *ngFor="let item of platforms" [id]="item.id" class="py-5">
-                        <p class="text-white text-center font-weight-bold">{{item.type}}</p>
-                        <a href="javascript:void(0)" mat-raised-button (click)="openDialog()" class="text-decoration-none navigate_hover text-white w-100">
-                            <div class="border-gradient p-3 primary-bg position-relative transition">
-                                <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="mb-2 o-contain platform_logo mw-80px mx-auto">
-                                <div class="row m-0">
-                                    <p class="text-white font-9 mb-1 w-100">FX rate</p>
-                                    <p class="text-white font-weight-bold w-100 font_13">$ {{item.fx_rate}}</p>
+                        <p class="text-black text-center mb-1 font_13 font-weight-bold">{{item.type}}</p>
+                        <a href="javascript:void(0)" mat-raised-button (click)="openDialog()" class="text-decoration-none text-white w-100">
+                            <div class="p-4 light-white rounded_1 position-relative transition navigation_link">
+                                <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="mb-4 o-contain platform_logo mw-80px mx-auto">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="text-black font-9 mb-0 w-100">FX rate</p>
+                                        <p class="text-black font-weight-bold w-100 font_13">$ {{item.fx_rate}}</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="text-black font-9 mb-0 w-100">Recipient Gets</p>
+                                        <p class="text-black font-weight-bold w-100 font_13">$ {{item.reciepient_amount}}</p>
+                                    </div>
                                 </div>
-                                <div class="row m-0">
-                                    <p class="text-white font-9 mb-1 w-100">Recipient Gets</p>
-                                    <p class="text-white font-weight-bold w-100 font_13">$ {{item.reciepient_amount}}</p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="text-black font-9 mb-0 w-100">Should Arrived By</p>
+                                        <p class="text-black font-weight-bold w-100 font_13">{{item.day}}</p>
+                                    </div>
                                 </div>
-                                <div class="row m-0">
-                                    <p class="text-white font-9 mb-1 w-100">Should Arrived By</p>
-                                    <p class="text-white font-weight-bold w-100 font_13">{{item.day}}</p>
-                                </div>
-                                <div class="col-12 p-0 text-center font-weight-bold d-inline-flex align-item-center justify-content-center">
-                                    Transfer Now
-                                    <mat-icon class="ml-2 transition">navigate_next</mat-icon>
+                                <div class="col-12 p-0 text-center mb-3 font-weight-bold d-inline-flex align-items-center justify-content-center">
+                                    <span class="navigate_hover px-4 py-2 d-inline-flex align-items-center">
+                                        Transfer Now
+                                        <mat-icon class="ml-2 transition">navigate_next</mat-icon>
+                                    </span>
                                 </div>
                             </div>
                         </a>
@@ -90,32 +100,32 @@
         <div class="container mx-auto mb-3 mt-5">
             <!-- <perfect-scrollbar> -->
             <div class="table-responsive overflow-visible">
-                <table class="table text-white rounded_lg_1 grey-bg transfer_table">
+                <table class="table text-black rounded_lg_1 light-white transfer_table">
                     <thead class="">
                         <tr>
-                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none font-9 px-3 py-4">
+                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">
                                 <span class="d-flex align-items-center mt-2 mt-lg-0">
                                         <span>FX Rate</span>
                                 <mat-icon class="ml-2 transition highlight-color">keyboard_arrow_up</mat-icon>
                                 </span>
                             </th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none font-9 px-3 py-4">Transfer through</th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none font-9 px-3 py-4">
+                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">Transfer through</th>
+                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">
                                 <span class="d-flex align-item-center">
                                     Commision + Fees
                                     <mat-icon class="ml-2 transition highlight-color">keyboard_arrow_up</mat-icon>
                                 </span>
                             </th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none font-9 px-3 py-4">Should arrived by</th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none font-9 px-3 py-4">Recipient gets</th>
+                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">Should arrived by</th>
+                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">Recipient gets</th>
                             <th class="border-0 d-lg-table-cell d-none"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let item of platforms" class="transition pointer navigate_hover" mat-raised-button (click)="openDialog()">
+                        <tr *ngFor="let item of platforms" class="transition pointer navigation_link" mat-raised-button (click)="openDialog()">
                             <td data-label="Fx Rate" scope="row" class="border-0 align-middle position-relative p-lg-4"><span class="font-bigger">{{item.fx_rate}}</span></td>
                             <td class="border-0 align-middle position-relative p-lg-4 transfer_from_logo">
-                                <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="o-contain platform_logo mw-80px mx-auto">
+                                <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="o-contain platform_logo mx-auto">
                             </td>
                             <td data-label="Recipient gets" class="border-0 align-middle position-relative d-lg-none p-lg-4"><span class="font-bigger">${{item.reciepient_amount}}</span></td>
                             <td data-label="Commision Fees" class="border-0 align-middle position-relative text-lg-right p-lg-4">
@@ -132,7 +142,7 @@
                             <td data-label="Should arrived by" class="border-0 align-middle position-relative p-lg-4">{{item.day}}</td>
                             <td data-label="Recipient gets" class="border-0 align-middle position-relative d-none d-lg-table-cell p-lg-4">${{item.reciepient_amount}}</td>
                             <td class="border-0 align-middle position-relative p-lg-4 vertical transfer_from_logo">
-                                <span class="d-inline-flex font-weight-bold align-items-center text-white">
+                                <span class="d-inline-flex font-weight-bold align-items-center navigate_hover px-3 py-2">
                                     <span class="xs-none">Transfer Now</span>
                                 <mat-icon class="ml-2 transition">navigate_next</mat-icon>
                                 </span>
@@ -144,39 +154,49 @@
             <!-- </perfect-scrollbar> -->
         </div>
     </div>
-    <div class="col-12 mb-5">
+    <div class="col-12 mb-5 mt-4">
         <div class="container mx-auto mb-3 mt-5">
-            <h1 class="text-center mb-5 text-white font-weight-bold"><span class="text-danger font-weight-bold h1">5 Easy</span> Steps</h1>
-            <div class="row align-items-center m-0 text-white steps">
-                <div class="w-lg-20 col-12 mx-auto text-center px-3 position-relative">
-                    <p>
-                        <img src="../../assets/dollar.svg" alt="" width="40" />
-                    </p>
-                    <p class="">Enter an amount to send</p>
+            <h1 class="text-center mb-5 text-white font-weight-bold fa-4x"><span class="text-blue font-weight-bold">5 Easy</span> Steps</h1>
+            <div class="row col-md-11 mx-auto m-0 text-black steps">
+                <div class="w-lg-20 p-3 col-12 mx-auto text-center position-relative">
+                    <div class="light-white row m-0 align-items-center justify-content-center p-4 h-100 rounded_1">
+                        <p class="mb-3 w-100">
+                            <img src="../../assets/dollar.svg" alt="" width="40" />
+                        </p>
+                        <p class="m-0">Enter an amount to send</p>
+                    </div>
                 </div>
-                <div class="w-lg-20 col-12 mx-auto text-center px-3 position-relative">
-                    <p>
-                        <img src="../../assets/rating.svg" alt="" width="40" />
-                    </p>
-                    <p class="">Choose the best provider</p>
+                <div class="w-lg-20 p-3 col-12 mx-auto text-center position-relative">
+                    <div class="light-white row m-0 align-items-center justify-content-center p-4 h-100 rounded_1">
+                        <p class="mb-3 w-100">
+                            <img src="../../assets/rating.svg" alt="" width="40" />
+                        </p>
+                        <p class="m-0">Choose the best provider</p>
+                    </div>
                 </div>
-                <div class="w-lg-20 col-12 mx-auto text-center px-3 position-relative">
-                    <p>
-                        <img src="../../assets/add.svg" alt="" width="40" />
-                    </p>
-                    <p class="">Add recipient details</p>
+                <div class="w-lg-20 p-3 col-12 mx-auto text-center position-relative">
+                    <div class="light-white row m-0 align-items-center justify-content-center p-4 h-100 rounded_1">
+                        <p class="mb-3 w-100">
+                            <img src="../../assets/add.svg" alt="" width="40" />
+                        </p>
+                        <p class="m-0">Add recipient details</p>
+                    </div>
                 </div>
-                <div class="w-lg-20 col-12 mx-auto text-center px-3 position-relative">
-                    <p>
-                        <img src="../../assets/user.svg" alt="" width="40" />
-                    </p>
-                    <p class="">Verify your identity or Unique Identifier</p>
+                <div class="w-lg-20 p-3 col-12 mx-auto text-center position-relative">
+                    <div class="light-white row m-0 align-items-center justify-content-center p-4 h-100 rounded_1">
+                        <p class="mb-3 w-100">
+                            <img src="../../assets/user.svg" alt="" width="40" />
+                        </p>
+                        <p class="m-0">Verify your identity or Unique Identifier</p>
+                    </div>
                 </div>
-                <div class="w-lg-20 col-12 mx-auto text-center px-3 position-relative">
-                    <p>
-                        <img src="../../assets/credit-card.svg" alt="" width="40" />
-                    </p>
-                    <p class="">Pay for Transfer</p>
+                <div class="w-lg-20 p-3 col-12 mx-auto text-center position-relative">
+                    <div class="light-white row m-0 align-items-center justify-content-center p-4 h-100 rounded_1">
+                        <p class="mb-3 w-100">
+                            <img src="../../assets/credit-card.svg" alt="" width="40" />
+                        </p>
+                        <p class="m-0">Pay for Transfer</p>
+                    </div>
                 </div>
             </div>
         </div>

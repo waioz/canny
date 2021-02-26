@@ -20,7 +20,6 @@ export class HomepageComponent implements OnInit {
     touchDrag: true,
     pullDrag: true,
     dots: false,
-    center: true,
     margin: 40,
     stagePadding: 30,
     navSpeed: 700,
@@ -28,10 +27,14 @@ export class HomepageComponent implements OnInit {
     responsive: {
       0: {
         items: 1,
+        margin: 20,
+        stagePadding: 10,
         nav: true
       },
       400: {
-        items: 2
+        items: 2,
+        margin: 20,
+        stagePadding: 10,
       },
       740: {
         items: 3

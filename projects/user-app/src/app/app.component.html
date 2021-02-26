@@ -52,25 +52,25 @@
         </div>
     </mat-drawer>
     <mat-drawer-content>
-        <nav class="navbar navbar-default position-fixed w-100 t-0 z-index-2 primary-bg">
+        <nav id="header" class="navbar navbar-default position-fixed transition w-100 t-0 z-index-2">
             <div class="container overflow-hidden">
                 <div class="navbar-header">
-                    <a class="navbar-brand font-weight-bold text-white" [routerLink]="['/']" routerLinkActive="router-link-active"><img src="../assets/logo.png" alt="" class="mr-2 logo">Canny</a>
+                    <a class="navbar-brand font-weight-bold font_13 gradient-text" [routerLink]="['/']" routerLinkActive="router-link-active"><img src="../assets/logo.png" alt="" class="mr-2 logo">Canny</a>
                 </div>
                 <div class="ml-auto d-flex align-items-center">
                     <span class="font-9 transition d-none d-lg-inline-flex navigation" [ngClass]="{slideLeft: is_menu}">
                         <span class=" d-inline-flex mr-4">
-                            <a href="javascript:void(0)" class="text-decoration-none transition">Register</a>
-                        </span>
+                            <a href="javascript:void(0)" class="text-decoration-none transition"><span data-hover="Register">Register</span></a>
+                    </span>
                     <span class=" d-inline-flex mr-4">
-                            <a href="javascript:void(0)" class="text-decoration-none transition">Login</a>
-                        </span>
+                            <a href="javascript:void(0)" class="text-decoration-none transition"><span data-hover="Login">Login</span></a>
+                    </span>
                     <span class=" d-inline-flex mr-4">
-                            <a href="javascript:void(0)" class="text-decoration-none transition">How it Works</a>
-                        </span>
+                            <a href="javascript:void(0)" class="text-decoration-none transition"><span data-hover="How it Works">How it Works</span></a>
+                    </span>
                     <span class=" d-inline-flex mr-3">
-                            <a href="javascript:void(0)" class="text-decoration-none transition">Send Money</a>
-                        </span>
+                            <a href="javascript:void(0)" class="text-decoration-none transition"><span data-hover="Send Money">Send Money</span></a>
+                    </span>
                     </span>
                     <span class="text-white d-inline-flex mw-80px">
                         <mat-form-field appearance="fill" class="no_style w-100">
