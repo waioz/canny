@@ -199,6 +199,14 @@ body {
     overflow: auto;
 }
 
+.flag-img {
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+}
+
 .mat-drawer-inner-container {
     height: auto !important;
 }
@@ -544,4 +552,10 @@ mat-icon.mat-icon {
 
 .text-black {
     color: #000;
+}
+
+@media (max-width: 767px) {
+    .flag-img {
+        top: 39px;
+    }
 }

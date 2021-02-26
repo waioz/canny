@@ -9,9 +9,26 @@ import { RegisterComponent } from './register/register.component';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
-  currencies: string[] = ['GBP', 'USD', 'INR']
-  selectedCurrencySend = "USD";
-  selectedCurrencyReceive = "GBP";
+  currencies = [
+    {
+      icon: "gbp",
+      name: 'GBP', 
+    },
+    {
+      icon: "usd",
+      name: 'USD',
+    },
+    {
+      icon: "inr",
+      name: 'INR',
+    },
+    {
+      icon: "eur",
+      name: 'EUR',
+    }
+  ]
+  selectedCurrencySend = "usd";
+  selectedCurrencyReceive = "gbp";
   faLongArrowAltDown = faLongArrowAltDown;
   faLongArrowAltUp = faLongArrowAltUp
   customOptions: OwlOptions = {

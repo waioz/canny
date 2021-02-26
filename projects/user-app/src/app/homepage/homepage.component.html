@@ -13,10 +13,11 @@
                 <div class="col-12 px-4 pt-5 pb-4 currency_section text-center mx-auto">
                     <div class="row m-0">
                         <div class="col-md-4 col-5 p-0 mx-auto">
+                            <img src="../../assets/{{selectedCurrencySend}}.png" alt="" class="flag-img">
                             <mat-form-field appearance="fill" class="no_style w-100">
                                 <mat-select class="font-weight-bold" [(ngModel)]="selectedCurrencySend">
                                     <mat-option>None</mat-option>
-                                    <mat-option *ngFor="let currency of currencies" [value]="currency">{{currency}}</mat-option>
+                                    <mat-option *ngFor="let currency of currencies" [value]="currency.icon">{{currency.name}}</mat-option>
                                 </mat-select>
                             </mat-form-field>
                         </div>
@@ -38,10 +39,11 @@
                     </div>
                     <div class="row mx-0 mb-3">
                         <div class="col-md-4 col-5 p-0 mx-auto">
+                            <img src="../../assets/{{selectedCurrencyReceive}}.png" alt="" class="flag-img">
                             <mat-form-field appearance="fill" class="no_style w-100">
                                 <mat-select class=" font-weight-bold" [(ngModel)]="selectedCurrencyReceive">
                                     <mat-option>None</mat-option>
-                                    <mat-option *ngFor="let currency of currencies" [value]="currency">{{currency}}</mat-option>
+                                    <mat-option *ngFor="let currency of currencies" [value]="currency.icon">{{currency.name}}</mat-option>
                                 </mat-select>
                             </mat-form-field>
                         </div>
