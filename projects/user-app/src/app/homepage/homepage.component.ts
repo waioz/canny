@@ -75,7 +75,8 @@ export class HomepageComponent implements OnInit {
       day: '1 day',
       commision_fee: 2.3,
       commision_percentage: 0,
-      fx_rate: 1.3592
+      fx_rate: 1.3592,
+      content: "Monzo"
     },
     {
       id: '2',
@@ -86,7 +87,8 @@ export class HomepageComponent implements OnInit {
       day: '1 day',
       commision_fee: 2.3,
       commision_percentage: 0,
-      fx_rate: 1.3592
+      fx_rate: 1.3592,
+      content: "Paypal"
     },
     {
       id: '3',
@@ -97,7 +99,8 @@ export class HomepageComponent implements OnInit {
       day: '1 day',
       commision_fee: 2.3,
       commision_percentage: 0,
-      fx_rate: 1.3592
+      fx_rate: 1.3592,
+      content: "Mongo"
     },
     {
       id: '4',
@@ -108,7 +111,8 @@ export class HomepageComponent implements OnInit {
       day: '1 day',
       commision_fee: 2.3,
       commision_percentage: 0,
-      fx_rate: 1.3592
+      fx_rate: 1.3592,
+      content: "Paypal"
     },
   ]
   constructor(public dialog: MatDialog) { }

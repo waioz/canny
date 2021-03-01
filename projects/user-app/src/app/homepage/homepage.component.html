@@ -81,7 +81,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
-                                        <p class="text-black font-9 mb-0 w-100">Should Arrived By</p>
+                                        <p class="text-black font-9 mb-0 w-100">Should Arrive By</p>
                                         <p class="text-dark-grey font-weight-bold w-100 font_13">{{item.day}}</p>
                                     </div>
                                 </div>
@@ -105,23 +105,23 @@
                 <table class="table text-dark-grey rounded_lg_1 light-white transfer_table">
                     <thead class="">
                         <tr>
-                            <th scope="col" class="text-dark-grey align-middle border-0 d-lg-table-cell d-none px-3 py-4">
+                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">
                                 <span class="d-flex align-items-center mt-2 mt-lg-0">
                                         <span>FX Rate</span>
                                 <mat-icon class="ml-2 transition highlight-color">keyboard_arrow_up</mat-icon>
                                 </span>
                             </th>
-                            <th scope="col" class="text-dark-grey align-middle border-0 d-lg-table-cell d-none px-3 py-4" style="width: 230px;">Transfer through</th>
-                            <th scope="col" class="text-dark-grey align-middle border-0 d-lg-table-cell d-none px-3 py-4">
+                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4" style="width: 230px;">Transfer through</th>
+                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4 text-right">
                                 <span class="d-flex align-item-center">
                                     <span class="d-lg-block d-none">
                                         <span class="border-bottom border-secondary pb-1">Fees</span>
-                                <span class="d-flex justify-content-lg-end align-item-center mt-2">Commision <mat-icon class="ml-2 transition highlight-color">keyboard_arrow_up</mat-icon></span>
+                                <span class="d-flex justify-content-lg-end align-item-center mt-2"><mat-icon class="mr-2 transition highlight-color">keyboard_arrow_up</mat-icon>Commision</span>
                                 </span>
                                 </span>
                             </th>
-                            <th scope="col" class="text-dark-grey align-middle border-0 d-lg-table-cell d-none px-3 py-4">Should arrived by</th>
-                            <th scope="col" class="text-dark-grey align-middle border-0 d-lg-table-cell d-none px-3 py-4">Recipient gets</th>
+                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">Should arrive by</th>
+                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">Recipient gets</th>
                             <th class="border-0 d-lg-table-cell d-none"></th>
                         </tr>
                     </thead>
@@ -130,10 +130,7 @@
                             <td data-label="Fx Rate" scope="row" class="border-0 align-middle position-relative p-lg-4"><span class="font-bigger">{{item.fx_rate}}</span></td>
                             <td class="border-0 align-middle position-relative p-lg-4 transfer_from_logo">
                                 <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="o-contain platform_logo mx-auto">
-                                <mat-form-field appearance="outline" class="no_style_input d-block">
-                                    <mat-label class="font-9">Content</mat-label>
-                                    <input autocomplete="off" class="" matInput>
-                                </mat-form-field>
+                                <span class="ml-5">{{item.content}}</span>
                             </td>
                             <td data-label="Recipient gets" class="border-0 align-middle position-relative d-lg-none p-lg-4"><span class="font-bigger">${{item.reciepient_amount}}</span></td>
                             <td data-label="Commision Fees" class="border-0 align-middle position-relative text-lg-right p-lg-4">
@@ -147,7 +144,7 @@
                                     {{item.reciepient_percentage}} / {{item.commision_percentage}}%
                                 </span>
                             </td>
-                            <td data-label="Should arrived by" class="border-0 align-middle position-relative p-lg-4">{{item.day}}</td>
+                            <td data-label="Should arrive by" class="border-0 align-middle position-relative p-lg-4">{{item.day}}</td>
                             <td data-label="Recipient gets" class="border-0 align-middle position-relative d-none d-lg-table-cell p-lg-4"><span class="font-bigger">${{item.reciepient_amount}}</span></td>
                             <td class="border-0 align-middle position-relative p-lg-4 vertical transfer_from_logo">
                                 <span class="d-inline-flex font-weight-bold align-items-center navigate_hover px-3 py-2">
