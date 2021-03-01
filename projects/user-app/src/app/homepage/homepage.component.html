@@ -72,17 +72,17 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <p class="text-black font-9 mb-0 w-100">FX rate</p>
-                                        <p class="text-black font-weight-bold w-100 font_13">$ {{item.fx_rate}}</p>
+                                        <p class="text-dark-grey font-weight-bold w-100 font_13">$ {{item.fx_rate}}</p>
                                     </div>
                                     <div class="col-6">
                                         <p class="text-black font-9 mb-0 w-100">Recipient Gets</p>
-                                        <p class="text-black font-weight-bold w-100 font_13">$ {{item.reciepient_amount}}</p>
+                                        <p class="text-dark-grey font-weight-bold w-100 font_13">$ {{item.reciepient_amount}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
                                         <p class="text-black font-9 mb-0 w-100">Should Arrived By</p>
-                                        <p class="text-black font-weight-bold w-100 font_13">{{item.day}}</p>
+                                        <p class="text-dark-grey font-weight-bold w-100 font_13">{{item.day}}</p>
                                     </div>
                                 </div>
                                 <div class="col-12 p-0 text-center mb-3 font-weight-bold d-inline-flex align-items-center justify-content-center">
@@ -102,24 +102,26 @@
         <div class="container mx-auto mb-3 mt-5">
             <!-- <perfect-scrollbar> -->
             <div class="table-responsive overflow-visible">
-                <table class="table text-black rounded_lg_1 light-white transfer_table">
+                <table class="table text-dark-grey rounded_lg_1 light-white transfer_table">
                     <thead class="">
                         <tr>
-                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">
+                            <th scope="col" class="text-dark-grey align-middle border-0 d-lg-table-cell d-none px-3 py-4">
                                 <span class="d-flex align-items-center mt-2 mt-lg-0">
                                         <span>FX Rate</span>
                                 <mat-icon class="ml-2 transition highlight-color">keyboard_arrow_up</mat-icon>
                                 </span>
                             </th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">Transfer through</th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">
+                            <th scope="col" class="text-dark-grey align-middle border-0 d-lg-table-cell d-none px-3 py-4" style="width: 230px;">Transfer through</th>
+                            <th scope="col" class="text-dark-grey align-middle border-0 d-lg-table-cell d-none px-3 py-4">
                                 <span class="d-flex align-item-center">
-                                    Commision + Fees
-                                    <mat-icon class="ml-2 transition highlight-color">keyboard_arrow_up</mat-icon>
+                                    <span class="d-lg-block d-none">
+                                        <span class="border-bottom border-secondary pb-1">Fees</span>
+                                <span class="d-flex justify-content-lg-end align-item-center mt-2">Commision <mat-icon class="ml-2 transition highlight-color">keyboard_arrow_up</mat-icon></span>
+                                </span>
                                 </span>
                             </th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">Should arrived by</th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">Recipient gets</th>
+                            <th scope="col" class="text-dark-grey align-middle border-0 d-lg-table-cell d-none px-3 py-4">Should arrived by</th>
+                            <th scope="col" class="text-dark-grey align-middle border-0 d-lg-table-cell d-none px-3 py-4">Recipient gets</th>
                             <th class="border-0 d-lg-table-cell d-none"></th>
                         </tr>
                     </thead>
@@ -127,6 +129,10 @@
                         <tr *ngFor="let item of platforms" class="transition pointer navigation_link" mat-raised-button (click)="openDialog()">
                             <td data-label="Fx Rate" scope="row" class="border-0 align-middle position-relative p-lg-4"><span class="font-bigger">{{item.fx_rate}}</span></td>
                             <td class="border-0 align-middle position-relative p-lg-4 transfer_from_logo">
+                                <mat-form-field appearance="outline" class="no_style_input">
+                                    <mat-label class="font-9">Content</mat-label>
+                                    <input autocomplete="off" class="font-weight-bold font_13" matInput>
+                                </mat-form-field>
                                 <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="o-contain platform_logo mx-auto">
                             </td>
                             <td data-label="Recipient gets" class="border-0 align-middle position-relative d-lg-none p-lg-4"><span class="font-bigger">${{item.reciepient_amount}}</span></td>
@@ -142,7 +148,7 @@
                                 </span>
                             </td>
                             <td data-label="Should arrived by" class="border-0 align-middle position-relative p-lg-4">{{item.day}}</td>
-                            <td data-label="Recipient gets" class="border-0 align-middle position-relative d-none d-lg-table-cell p-lg-4">${{item.reciepient_amount}}</td>
+                            <td data-label="Recipient gets" class="border-0 align-middle position-relative d-none d-lg-table-cell p-lg-4"><span class="font-bigger">${{item.reciepient_amount}}</span></td>
                             <td class="border-0 align-middle position-relative p-lg-4 vertical transfer_from_logo">
                                 <span class="d-inline-flex font-weight-bold align-items-center navigate_hover px-3 py-2">
                                     <span class="xs-none">Transfer Now</span>

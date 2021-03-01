@@ -39,11 +39,16 @@
         </p>
         <div class="col-12 p-3">
             <span class="position-relative d-block">
-                <input type="text" class="p-2 bg-white rounded font-9 gradient-input w-100 outline-none shadow-none"
+                <mat-form-field appearance="legacy" class="no_style_input w-100">
+                    <mat-label class="font-9">Search for Business</mat-label>
+                    <span matPrefix class=""><mat-icon class="bg-transparent">search</mat-icon></span>
+            <input autocomplete="off" class="font-weight-bold font_13" matInput>
+            </mat-form-field>
+            <!-- <input type="text" class="p-2 bg-white rounded font-9 gradient-input w-100 outline-none shadow-none"
                     placeholder="Search for Business">
                 <span class="position-absolute l-0 t-0 p-2">
-                    <mat-icon class="bg-transparent">search</mat-icon>
-                </span>
+                    
+                </span> -->
             </span>
         </div>
         <div class="row m-0 align-items-center mt-4 link mx-auto">

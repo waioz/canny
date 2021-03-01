@@ -6,6 +6,7 @@
 $primary: #24273A;
 $text-blue: #0F106B;
 $text-grey: #9a9a9a;
+$text-dark-grey: #404040;
 $text-orange:#f74c21;
 @font-face {
     font-family: "Helvetica";
@@ -98,6 +99,10 @@ body {
     color: $text-grey;
 }
 
+.text-dark-grey {
+    color: $text-dark-grey;
+}
+
 .no_style {
     .mat-form-field-flex {
         background: transparent;
@@ -140,6 +145,9 @@ body {
     }
     &.mat-form-field-appearance-legacy .mat-form-field-label {
         color: #000;
+    }
+    &.mat-form-field-appearance-outline .mat-form-field-wrapper {
+        padding: 0;
     }
 }
 
@@ -387,10 +395,6 @@ body {
         border-bottom: 1px solid #eee;
         position: relative;
         padding-left: 50% !important;
-        .font-bigger {
-            font-size: 1.2em;
-            font-weight: bold;
-        }
     }
     td:before {
         /* Now like a table header */
@@ -558,4 +562,9 @@ mat-icon.mat-icon {
     .flag-img {
         top: 39px;
     }
+}
+
+.font-bigger {
+    font-size: 1.2em;
+    font-weight: bold;
 }
