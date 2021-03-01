@@ -129,11 +129,11 @@
                         <tr *ngFor="let item of platforms" class="transition pointer navigation_link" mat-raised-button (click)="openDialog()">
                             <td data-label="Fx Rate" scope="row" class="border-0 align-middle position-relative p-lg-4"><span class="font-bigger">{{item.fx_rate}}</span></td>
                             <td class="border-0 align-middle position-relative p-lg-4 transfer_from_logo">
-                                <mat-form-field appearance="outline" class="no_style_input">
-                                    <mat-label class="font-9">Content</mat-label>
-                                    <input autocomplete="off" class="font-weight-bold font_13" matInput>
-                                </mat-form-field>
                                 <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="o-contain platform_logo mx-auto">
+                                <mat-form-field appearance="outline" class="no_style_input d-block">
+                                    <mat-label class="font-9">Content</mat-label>
+                                    <input autocomplete="off" class="" matInput>
+                                </mat-form-field>
                             </td>
                             <td data-label="Recipient gets" class="border-0 align-middle position-relative d-lg-none p-lg-4"><span class="font-bigger">${{item.reciepient_amount}}</span></td>
                             <td data-label="Commision Fees" class="border-0 align-middle position-relative text-lg-right p-lg-4">
