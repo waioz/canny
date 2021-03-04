@@ -586,10 +586,6 @@ mat-icon.mat-icon {
         background: rgba(226, 226, 226, 0.9);
         max-height: 100vh;
     }
-    .border-light-gradient {
-        border: 1.5em solid rgba(0, 0, 0, 0.5);
-        border-radius: 1em;
-    }
 }
 
 .btn {
@@ -634,4 +630,14 @@ mat-icon.mat-icon {
 
 .lh-30 {
     line-height: 30px;
+}
+
+@media (max-width: 500px) {
+    .styled-dialog {
+        .border-light-gradient {
+            >h1 {
+                font-size: 1.6em;
+            }
+        }
+    }
 }

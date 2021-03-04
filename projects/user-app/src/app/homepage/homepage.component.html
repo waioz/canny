@@ -65,7 +65,7 @@
             <div class="mx-auto">
                 <owl-carousel-o [options]="customOptions" class="platform_slider">
                     <ng-template carouselSlide *ngFor="let item of platforms" [id]="item.id" class="py-5">
-                        <p class="text-black text-center mb-1 font_13 font-weight-bold">{{item.type}}</p>
+                        <p class="text-dark-grey text-center mb-1 font_13 font-weight-bold">{{item.type}}</p>
                         <a href="javascript:void(0)" mat-raised-button (click)="openDialog()" class="text-decoration-none text-white w-100">
                             <div class="p-4 light-white rounded_1 position-relative transition navigation_link">
                                 <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="mb-4 o-contain platform_logo mw-80px mx-auto">
@@ -105,14 +105,14 @@
                 <table class="table text-dark-grey rounded_lg_1 light-white transfer_table">
                     <thead class="">
                         <tr>
-                            <th scope="col" class="gradient-text align-middle border-0 d-md-table-cell d-none px-3 py-4">
+                            <th scope="col" class="text-dark-grey align-middle border-0 d-md-table-cell d-none px-3 py-4">
                                 <span class="d-flex align-items-center mt-2 mt-lg-0">
                                         <span>FX Rate</span>
                                 <mat-icon class="ml-2 transition highlight-color">keyboard_arrow_up</mat-icon>
                                 </span>
                             </th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-md-table-cell d-none px-3 py-4" style="width: 230px;">Transfer through</th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-md-table-cell d-none px-3 py-4 text-right">
+                            <th scope="col" class="text-dark-grey align-middle border-0 d-md-table-cell d-none px-3 py-4" style="width: 230px;">Transfer through</th>
+                            <th scope="col" class="text-dark-grey align-middle border-0 d-md-table-cell d-none px-3 py-4 text-right">
                                 <span class="d-flex align-item-center">
                                     <span class="d-lg-block d-none">
                                         <span class="border-bottom border-secondary pb-1">Fees</span>
@@ -120,8 +120,8 @@
                                 </span>
                                 </span>
                             </th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-md-table-cell d-none px-3 py-4">Should arrive by</th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-md-table-cell d-none px-3 py-4">Recipient gets</th>
+                            <th scope="col" class="text-dark-grey align-middle border-0 d-md-table-cell d-none px-3 py-4">Should arrive by</th>
+                            <th scope="col" class="text-dark-grey align-middle border-0 d-md-table-cell d-none px-3 py-4">Recipient gets</th>
                             <th class="border-0 d-md-table-cell d-none"></th>
                         </tr>
                     </thead>
@@ -130,7 +130,7 @@
                             <td data-label="Fx Rate" scope="row" class="border-0 align-middle position-relative p-lg-4"><span class="font-bigger">{{item.fx_rate}}</span></td>
                             <td class="border-0 align-middle position-relative p-lg-4 transfer_from_logo">
                                 <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="o-contain platform_logo mx-auto">
-                                <span class="ml-lg-5 d-block ml-md-4">{{item.content}}</span>
+                                <span class="ml-lg-5 d-block ml-md-4" *ngIf="item?.content">{{item.content}}</span>
                             </td>
                             <td data-label="Recipient gets" class="border-0 align-middle position-relative d-md-none p-lg-4"><span class="font-bigger">${{item.reciepient_amount}}</span></td>
                             <td data-label="Commision Fees" class="border-0 align-middle position-relative text-md-right p-lg-4">

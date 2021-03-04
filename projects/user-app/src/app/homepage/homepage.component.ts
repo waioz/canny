@@ -87,8 +87,7 @@ export class HomepageComponent implements OnInit {
       day: '1 day',
       commision_fee: 2.3,
       commision_percentage: 0,
-      fx_rate: 1.3592,
-      content: "Paypal"
+      fx_rate: 1.3592
     },
     {
       id: '3',
@@ -99,8 +98,7 @@ export class HomepageComponent implements OnInit {
       day: '1 day',
       commision_fee: 2.3,
       commision_percentage: 0,
-      fx_rate: 1.3592,
-      content: "Mongo"
+      fx_rate: 1.3592
     },
     {
       id: '4',
