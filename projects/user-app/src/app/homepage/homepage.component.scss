@@ -21,25 +21,6 @@
     height: 60px;
 }
 
-@keyframes bounceAlpha {
-    0% {
-        opacity: 1;
-        transform: translateX(0px) scale(1);
-    }
-    25% {
-        opacity: 0;
-        transform: translateX(10px) scale(0.9);
-    }
-    26% {
-        opacity: 0;
-        transform: translateX(-10px) scale(0.9);
-    }
-    55% {
-        opacity: 1;
-        transform: translateX(0px) scale(1);
-    }
-}
-
 .navigate_hover {
     color: #0e106b;
     border-radius: 2em;
@@ -104,6 +85,12 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width:990px) {
+    .platform_logo {
+        max-width: 100px;
     }
 }
 

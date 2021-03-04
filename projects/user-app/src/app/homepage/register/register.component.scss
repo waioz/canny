@@ -1,0 +1,81 @@
+.slide_left {
+    transform: translateX(-100%);
+}
+
+.slide_right {
+    transform: translateX(0%);
+}
+
+.height-0 {
+    height: 0;
+}
+
+.shimmer {
+    display: inline-block;
+    color: white;
+    background: #0e106b -webkit-gradient(linear, 100% 0, 0 0, from(#acacac), color-stop(0.5, #ffffff), to(#acacac));
+    background-position: -4rem top;
+    /*50px*/
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: shimmer;
+    -webkit-animation-name: shimmer;
+    animation-duration: 2.2s;
+    -webkit-animation-duration: 2.2s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    background-size: 4rem 100%;
+    -webkit-background-size: 4rem 100%;
+    /*50px*/
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -4rem top;
+        /*50px*/
+    }
+    70% {
+        background-position: 12.5rem top;
+        /*200px*/
+    }
+    100% {
+        background-position: 12.5rem top;
+        /*200px*/
+    }
+}
+
+@-webkit-keyframes shimmer {
+    0% {
+        background-position: -4rem top;
+        /*50px*/
+    }
+    70% {
+        background-position: 12.5rem top;
+        /*200px*/
+    }
+    100% {
+        background-position: 12.5rem top;
+        /*200px*/
+    }
+}
+
+.leftRight {
+    -webkit-animation: TextSequence 1.5s infinite forwards;
+    -moz-animation: TextSequence 1.5s infinite forwards;
+    animation: TextSequence 1.5s infinite forwards;
+}
+
+@keyframes TextSequence {
+    40% {
+        transform: scale(.7);
+    }
+    100% {
+        transform: translate(0) scale(1);
+    }
+}
+
+.text-indent-2 {
+    text-indent: 2px;
+}

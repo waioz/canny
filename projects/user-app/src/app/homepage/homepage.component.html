@@ -9,8 +9,8 @@
                     </div>
                 </h1>
             </div>
-            <div class="col-md-5 col-lg-4 ml-auto mt-4 mt-md-0">
-                <div class="col-12 px-4 pt-5 pb-4 currency_section text-center mx-auto">
+            <div class="col-md-6 col-xl-4 col-lg-5 ml-auto mt-4 mt-md-0">
+                <div class="col-12 px-4 pt-5 pt-sm-3 pb-4 currency_section text-center mx-auto">
                     <div class="row m-0">
                         <div class="col-md-4 col-5 p-0 mx-auto">
                             <img src="../../assets/{{selectedCurrencySend}}.png" alt="" class="flag-img">
@@ -105,14 +105,14 @@
                 <table class="table text-dark-grey rounded_lg_1 light-white transfer_table">
                     <thead class="">
                         <tr>
-                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">
+                            <th scope="col" class="gradient-text align-middle border-0 d-md-table-cell d-none px-3 py-4">
                                 <span class="d-flex align-items-center mt-2 mt-lg-0">
                                         <span>FX Rate</span>
                                 <mat-icon class="ml-2 transition highlight-color">keyboard_arrow_up</mat-icon>
                                 </span>
                             </th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4" style="width: 230px;">Transfer through</th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4 text-right">
+                            <th scope="col" class="gradient-text align-middle border-0 d-md-table-cell d-none px-3 py-4" style="width: 230px;">Transfer through</th>
+                            <th scope="col" class="gradient-text align-middle border-0 d-md-table-cell d-none px-3 py-4 text-right">
                                 <span class="d-flex align-item-center">
                                     <span class="d-lg-block d-none">
                                         <span class="border-bottom border-secondary pb-1">Fees</span>
@@ -120,9 +120,9 @@
                                 </span>
                                 </span>
                             </th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">Should arrive by</th>
-                            <th scope="col" class="gradient-text align-middle border-0 d-lg-table-cell d-none px-3 py-4">Recipient gets</th>
-                            <th class="border-0 d-lg-table-cell d-none"></th>
+                            <th scope="col" class="gradient-text align-middle border-0 d-md-table-cell d-none px-3 py-4">Should arrive by</th>
+                            <th scope="col" class="gradient-text align-middle border-0 d-md-table-cell d-none px-3 py-4">Recipient gets</th>
+                            <th class="border-0 d-md-table-cell d-none"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -130,26 +130,26 @@
                             <td data-label="Fx Rate" scope="row" class="border-0 align-middle position-relative p-lg-4"><span class="font-bigger">{{item.fx_rate}}</span></td>
                             <td class="border-0 align-middle position-relative p-lg-4 transfer_from_logo">
                                 <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="o-contain platform_logo mx-auto">
-                                <span class="ml-lg-5 d-block">{{item.content}}</span>
+                                <span class="ml-lg-5 d-block ml-md-4">{{item.content}}</span>
                             </td>
-                            <td data-label="Recipient gets" class="border-0 align-middle position-relative d-lg-none p-lg-4"><span class="font-bigger">${{item.reciepient_amount}}</span></td>
-                            <td data-label="Commision Fees" class="border-0 align-middle position-relative text-lg-right p-lg-4">
-                                <span class="d-lg-block d-none">
+                            <td data-label="Recipient gets" class="border-0 align-middle position-relative d-md-none p-lg-4"><span class="font-bigger">${{item.reciepient_amount}}</span></td>
+                            <td data-label="Commision Fees" class="border-0 align-middle position-relative text-md-right p-lg-4">
+                                <span class="d-md-block d-none">
                                     <span class="border-bottom border-secondary pb-1">{{item.reciepient_percentage}}</span>
-                                <span class="d-flex justify-content-lg-end align-item-center mt-2">
+                                <span class="d-flex justify-content-md-end align-item-center mt-2">
                                         {{item.commision_percentage}}%
                                     </span>
                                 </span>
-                                <span class="d-block d-lg-none">
+                                <span class="d-block d-md-none">
                                     {{item.reciepient_percentage}} / {{item.commision_percentage}}%
                                 </span>
                             </td>
                             <td data-label="Should arrive by" class="border-0 align-middle position-relative p-lg-4">{{item.day}}</td>
-                            <td data-label="Recipient gets" class="border-0 align-middle position-relative d-none d-lg-table-cell p-lg-4"><span class="font-bigger">${{item.reciepient_amount}}</span></td>
+                            <td data-label="Recipient gets" class="border-0 align-middle position-relative d-none d-md-table-cell p-lg-4"><span class="font-bigger">${{item.reciepient_amount}}</span></td>
                             <td class="border-0 align-middle position-relative p-lg-4 vertical transfer_from_logo">
-                                <span class="d-inline-flex font-weight-bold align-items-center navigate_hover px-3 py-2">
+                                <span class="d-inline-flex font-weight-bold align-items-center navigate_hover px-md-3 py-md-2">
                                     <span class="xs-none">Transfer Now</span>
-                                <mat-icon class="ml-2 transition">navigate_next</mat-icon>
+                                <mat-icon class="ml-md-2 transition">navigate_next</mat-icon>
                                 </span>
                             </td>
                         </tr>
@@ -163,7 +163,7 @@
         <div class="container mx-auto mb-3 mt-5">
             <h1 class="text-center mb-5 text-white font-weight-bold fa-4x"><span class="text-blue font-weight-bold">5 Easy</span> Steps</h1>
             <div class="row col-md-11 mx-auto m-0 text-black steps">
-                <div class="w-lg-20 p-3 col-12 mx-auto text-center position-relative">
+                <div class="w-lg-20 p-3 col-12 col-sm-6 mx-auto text-center position-relative animated" animateOnScroll animationName="animate__fadeIn">
                     <div class="light-white row m-0 align-items-center justify-content-center p-4 h-100 rounded_1">
                         <p class="mb-3 w-100">
                             <img src="../../assets/dollar.svg" alt="" width="40" />
@@ -171,7 +171,7 @@
                         <p class="m-0">Enter an amount to send</p>
                     </div>
                 </div>
-                <div class="w-lg-20 p-3 col-12 mx-auto text-center position-relative">
+                <div class="w-lg-20 p-3 col-12 col-sm-6 mx-auto text-center position-relative animated" animateOnScroll animationName="animate__fadeIn">
                     <div class="light-white row m-0 align-items-center justify-content-center p-4 h-100 rounded_1">
                         <p class="mb-3 w-100">
                             <img src="../../assets/rating.svg" alt="" width="40" />
@@ -179,7 +179,7 @@
                         <p class="m-0">Choose the best provider</p>
                     </div>
                 </div>
-                <div class="w-lg-20 p-3 col-12 mx-auto text-center position-relative">
+                <div class="w-lg-20 p-3 col-12 col-sm-6 mx-auto text-center position-relative animated" animateOnScroll animationName="animate__fadeIn">
                     <div class="light-white row m-0 align-items-center justify-content-center p-4 h-100 rounded_1">
                         <p class="mb-3 w-100">
                             <img src="../../assets/add.svg" alt="" width="40" />
@@ -187,7 +187,7 @@
                         <p class="m-0">Add recipient details</p>
                     </div>
                 </div>
-                <div class="w-lg-20 p-3 col-12 mx-auto text-center position-relative">
+                <div class="w-lg-20 p-3 col-12 col-sm-6 mx-auto text-center position-relative animated" animateOnScroll animationName="animate__fadeIn">
                     <div class="light-white row m-0 align-items-center justify-content-center p-4 h-100 rounded_1">
                         <p class="mb-3 w-100">
                             <img src="../../assets/user.svg" alt="" width="40" />
@@ -195,13 +195,36 @@
                         <p class="m-0">Verify your identity or Unique Identifier</p>
                     </div>
                 </div>
-                <div class="w-lg-20 p-3 col-12 mx-auto text-center position-relative">
+                <div class="w-lg-20 p-3 col-12 col-sm-6 mx-auto text-center position-relative animated" animateOnScroll animationName="animate__fadeIn">
                     <div class="light-white row m-0 align-items-center justify-content-center p-4 h-100 rounded_1">
                         <p class="mb-3 w-100">
                             <img src="../../assets/credit-card.svg" alt="" width="40" />
                         </p>
                         <p class="m-0">Pay for Transfer</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 light-white">
+        <div class="container text-dark-grey p-3">
+            <div class="row m-0 p-2 h-100">
+                <div class="col-lg-3 col-md-4 text-center p-3">
+                    <img src="../assets/logo.png" alt="" class="mr-2 logo">
+                </div>
+                <div class="col-md-4 p-3">
+                    <p class="m-0">Canny is the trading name of The Canny Technology Company Ltd , having registered office at Level 37, One Canada Square, Canary Wharf London, England, E14 5AA. Incorporated under the laws of England and Wales with company number 12673108.
+                    </p>
+                </div>
+                <div class="col-md-3 p-3">
+                    <ul class="list-unstyled">
+                        <li class="mb-1"><a href="#top" class="text-decoration-none text-blue transition d-inline-flex">Home</a>
+                        </li>
+                        <li class="mb-1"><a href="" class="text-decoration-none text-blue transition d-inline-flex">Privacy Policy</a>
+                        </li>
+                        <li class="mb-1"><a href="" class="text-decoration-none text-blue transition d-inline-flex">Cookie
+                                Policy</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

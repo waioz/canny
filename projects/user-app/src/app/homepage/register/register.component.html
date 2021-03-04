@@ -1,61 +1,88 @@
-<div class="col-12 px-3 pb-3 bg-white">
-    <div class="d-flex pt-5">
+<div class="col-12 p-3 border-light-gradient">
+    <h1 class="font-weight-bold w-100 text-blue text-center mt-4">Search for Business</h1>
+    <div class="d-flex pt-4 mb-5">
         <div class="w-100 text-center path position-relative">
             <a class="text-decoration-none d-inline-block link active">
-                <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-2 btn-gradient">
+                <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-3 btn-gradient">
                     <mat-icon class="">work</mat-icon>
                 </span>
-                <p class="text-body m-0">Business Detail</p>
+                <p class="text-body title font-9 m-0">Business Detail</p>
             </a>
         </div>
-        <div class="w-100 text-center path position-relative d-none d-lg-block">
+        <div class="w-100 text-center path position-relative d-none d-md-block">
             <a class="text-decoration-none d-inline-block link">
-                <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-2 btn-gradient">
-                    <mat-icon class="">settings_suggest</mat-icon>
+                <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-3 btn-gradient">
+                    <mat-icon class="text-indent-2">settings_suggest</mat-icon>
                 </span>
-                <p class="text-body m-0">Business Activity</p>
+                <p class="text-body title font-9 m-0">Business Activity</p>
             </a>
         </div>
-        <div class="w-100 text-center path position-relative d-none d-lg-block">
+        <div class="w-100 text-center path position-relative d-none d-md-block">
             <a class="text-decoration-none d-inline-block link">
-                <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-2 btn-gradient">
+                <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-3 btn-gradient">
                     <mat-icon class="">groups</mat-icon>
                 </span>
-                <p class="text-body m-0">Share holder / Director Details</p>
+                <p class="text-body title font-9 m-0">Share holder / Director Details</p>
             </a>
         </div>
-        <div class="w-100 text-center path position-relative d-none d-lg-block">
+        <div class="w-100 text-center path position-relative d-none d-md-block">
             <a class="text-decoration-none d-inline-block link">
-                <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-2 btn-gradient">
+                <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-3 btn-gradient">
                     <mat-icon class="">person</mat-icon>
                 </span>
-                <p class="text-body m-0">Personal Details</p>
+                <p class="text-body title font-9 m-0">Personal Details</p>
             </a>
         </div>
     </div>
-    <div class="col-12 col-lg-10 mx-auto row m-0 text-center mt-lg-5 px-0">
-        <h1 class="font-weight-bold w-100 gradient-text">Search for Business</h1>
-        <p class="w-100 text-body">Sole trader, free lancer or not registered with companies House ? Enter details here:
-        </p>
-        <div class="col-12 p-3">
-            <span class="position-relative d-block">
-                <mat-form-field appearance="legacy" class="no_style_input w-100">
-                    <mat-label class="font-9">Search for Business</mat-label>
-                    <span matPrefix class=""><mat-icon class="bg-transparent">search</mat-icon></span>
-            <input autocomplete="off" class="font-weight-bold font_13" matInput>
-            </mat-form-field>
-            <!-- <input type="text" class="p-2 bg-white rounded font-9 gradient-input w-100 outline-none shadow-none"
-                    placeholder="Search for Business">
-                <span class="position-absolute l-0 t-0 p-2">
-                    
-                </span> -->
-            </span>
+    <div class="d-flex overflow-hidden">
+        <div class="position-relative col-12 w-100 transition row m-0 text-center px-0" [ngClass]="slideNumber === 1 ? 'h-100': 'height-0'" [ngStyle]="{'transform': leftValue}">
+            <p class="w-100 text-body">Sole trader, free lancer or not registered with companies House ? Enter details here:
+            </p>
+            <div class="col-12 p-3 col-lg-10 mx-auto">
+                <span class="position-relative d-block">
+                    <mat-form-field appearance="legacy" class="no_style_input w-100">
+                        <mat-label class="font-9 shimmer">Search for Business</mat-label>
+                            <span matPrefix><mat-icon [inline]="true" class="bg-transparent mr-2">search</mat-icon></span>
+                <input autocomplete="off" class="font-weight-bold font_13" matInput>
+                </mat-form-field>
+                </span>
+            </div>
+            <div class="col-12 row m-0 align-items-center mx-auto mt-4 mb-2 link active justify-content-center">
+                <a href="javascript:void(0)" class="mr-4 d-flex align-items-center text-decoration-none text-body">
+                    <span class="font-9"><mat-icon [inline]="true">keyboard_arrow_left</mat-icon></span> Previous
+                </a>
+                <button type="button" (click)="goto_next(1)" class="btn orange-gradient border-0 d-inline-flex align-items-center transition justify-content-center font-weight-bold rounded-pill transition px-4 py-2 shadow-none outline-none">Continue
+                    <mat-icon [inline]="true">keyboard_arrow_right</mat-icon>
+                </button>
+            </div>
         </div>
-        <div class="row m-0 align-items-center mt-4 link mx-auto">
-            <a href="javascript:void(0)" class="mr-4 d-flex align-items-center text-decoration-none text-body">
-                <mat-icon>keyboard_arrow_left</mat-icon> Previous
-            </a>
-            <button type="button" class="btn btn-gradient rounded transition text-white p-2 shadow-none outline-none">Continue</button>
+        <div class="position-relative col-12 w-100 transition row m-0 text-center px-0" [ngClass]="slideNumber === 2 ? 'h-100': 'height-0'" [ngStyle]="{'transform':leftValue}">
+            <h3 class="w-100 text-body font-weight-bold">Business Overview</h3>
+            <div class="col-12 p-3 col-lg-10 mx-auto text-dark-grey">
+                <div class="align-items-center col-md-8 m-0 mb-4 mx-auto row">
+                    <span class="text-uppercase h1 mr-5">CL</span>
+                    <div class="text-left">
+                        <p class="text-uppercase h3">Cannyco ltd</p>
+                        <p class="font-9 m-0">11374801-ltd</p>
+                        <p class="font-9 m-0">1, Garden Terrace, Newcastle, England, NE40 4NG,.</p>
+                    </div>
+                </div>
+                <div class="row m-0 justify-content-center">
+                    <span class="d-inline-flex lh-30"><span class="mr-2">Not the right Business?</span>
+                    <a href="javascript:void(0)" class="text-decoration-none transition" (click)="goto_back(2)">
+                        <span class="font-weight-bold primary-color font-9 shimmer">Search again</span>
+                    </a>
+                    </span>
+                </div>
+            </div>
+            <div class="col-12 row m-0 align-items-center mx-auto mt-4 mb-2 link active justify-content-center">
+                <a href="javascript:void(0)" (click)="goto_back(2)" class="mr-4 d-flex align-items-center text-decoration-none text-body">
+                    <span class="font-9"><mat-icon [inline]="true">keyboard_arrow_left</mat-icon></span> Previous
+                </a>
+                <button type="button" class="btn orange-gradient border-0 d-inline-flex align-items-center transition justify-content-center font-weight-bold rounded-pill transition px-4 py-2 shadow-none outline-none">Continue
+                    <mat-icon [inline]="true">keyboard_arrow_right</mat-icon>
+                </button>
+            </div>
         </div>
     </div>
 </div>

@@ -126,6 +126,8 @@ export class HomepageComponent implements OnInit {
     this.selectedCurrencyReceive = dummy
   }
   openDialog(): void {
-    this.dialog.open(RegisterComponent);
+    this.dialog.open(RegisterComponent, {
+      panelClass: 'styled-dialog'
+    });
   }
 }
