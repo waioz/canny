@@ -13,18 +13,18 @@
                 <div class="col-12 px-4 pt-5 pt-sm-3 pb-4 currency_section text-center mx-auto">
                     <div class="row m-0">
                         <div class="col-md-4 col-5 p-0 mx-auto">
-                            <img src="../../assets/{{selectedCurrencySend}}.png" alt="" class="flag-img">
+                            <img src="../../assets/{{selectedCurrencySend?.icon}}.png" alt="" class="flag-img">
                             <mat-form-field appearance="fill" class="no_style w-100">
-                                <mat-select class="font-weight-bold" [(ngModel)]="selectedCurrencySend">
+                                <mat-select class="font-weight-bold" [(ngModel)]="selectedCurrencySend" [compareWith]="compareObjects">
                                     <mat-option>None</mat-option>
-                                    <mat-option *ngFor="let currency of currencies" [value]="currency.icon">{{currency.name}}</mat-option>
+                                    <mat-option *ngFor="let currency of currencies" [value]="currency">{{currency.name}}</mat-option>
                                 </mat-select>
                             </mat-form-field>
                         </div>
                         <div class="col-md-6 col-7 mx-auto">
                             <mat-form-field appearance="legacy" class="no_style_input text-right w-100">
                                 <mat-label class="font-9">You Send</mat-label>
-                                <span matPrefix class="">$ &nbsp;</span>
+                                <span matPrefix class="">{{selectedCurrencySend?.symbol}} &nbsp;</span>
                                 <input autocomplete="off" class="font-weight-bold font_13" matInput>
                             </mat-form-field>
                         </div>
@@ -39,18 +39,18 @@
                     </div>
                     <div class="row mx-0 mb-3">
                         <div class="col-md-4 col-5 p-0 mx-auto">
-                            <img src="../../assets/{{selectedCurrencyReceive}}.png" alt="" class="flag-img">
+                            <img src="../../assets/{{selectedCurrencyReceive?.icon}}.png" alt="" class="flag-img">
                             <mat-form-field appearance="fill" class="no_style w-100">
-                                <mat-select class=" font-weight-bold" [(ngModel)]="selectedCurrencyReceive">
+                                <mat-select class=" font-weight-bold" [(ngModel)]="selectedCurrencyReceive" [compareWith]="compareObjects">
                                     <mat-option>None</mat-option>
-                                    <mat-option *ngFor="let currency of currencies" [value]="currency.icon">{{currency.name}}</mat-option>
+                                    <mat-option *ngFor="let currency of currencies" [value]="currency">{{currency.name}}</mat-option>
                                 </mat-select>
                             </mat-form-field>
                         </div>
                         <div class="col-md-6 col-7 mx-auto">
                             <mat-form-field appearance="legacy" class="no_style_input text-right w-100">
                                 <mat-label class="font-9">Recipient Gets</mat-label>
-                                <span matPrefix class="">$ &nbsp;</span>
+                                <span matPrefix class="">{{selectedCurrencyReceive?.symbol}} &nbsp;</span>
                                 <input autocomplete="off" class=" font-weight-bold font_13" matInput>
                             </mat-form-field>
                         </div>
@@ -130,7 +130,7 @@
                             <td data-label="Fx Rate" scope="row" class="border-0 align-middle position-relative p-lg-4"><span class="font-bigger">{{item.fx_rate}}</span></td>
                             <td class="border-0 align-middle position-relative p-lg-4 transfer_from_logo">
                                 <img [src]="item.src" [alt]="item.alt" [title]="item.title" class="o-contain platform_logo mx-auto">
-                                <span class="ml-lg-5 d-block ml-md-4" *ngIf="item?.content">{{item.content}}</span>
+                                <span class="ml-lg-5 d-block ml-md-4 font-9" *ngIf="item?.content">{{item.content}}</span>
                             </td>
                             <td data-label="Recipient gets" class="border-0 align-middle position-relative d-md-none p-lg-4"><span class="font-bigger">${{item.reciepient_amount}}</span></td>
                             <td data-label="Commision Fees" class="border-0 align-middle position-relative text-md-right p-lg-4">
@@ -208,9 +208,9 @@
     </div>
     <div class="col-12 light-white">
         <div class="container text-dark-grey p-3">
-            <div class="row m-0 p-2 h-100">
+            <div class="row m-0 p-2 justify-content-center">
                 <div class="col-lg-3 col-md-4 text-center p-3">
-                    <img src="../assets/logo.png" alt="" class="mr-2 logo">
+                    <img src="../assets/logo.png" alt="" class="mr-2 logo mw-100x">
                 </div>
                 <div class="col-md-4 p-3">
                     <p class="m-0">Canny is the trading name of The Canny Technology Company Ltd , having registered office at Level 37, One Canada Square, Canary Wharf London, England, E14 5AA. Incorporated under the laws of England and Wales with company number 12673108.

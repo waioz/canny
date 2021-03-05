@@ -9,26 +9,38 @@ import { RegisterComponent } from './register/register.component';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
+  selectedCurrencySend = {
+    icon: "usd",
+    name: 'USD',
+    symbol: '$'
+  };
+  selectedCurrencyReceive = {
+    icon: "eur",
+    name: 'EUR',
+    symbol: '€'
+  };
   currencies = [
     {
       icon: "gbp",
       name: 'GBP', 
+      symbol: '£'
     },
     {
       icon: "usd",
       name: 'USD',
+      symbol: '$'
     },
     {
       icon: "inr",
       name: 'INR',
+      symbol: '₹'
     },
     {
       icon: "eur",
       name: 'EUR',
+      symbol: '€'
     }
   ]
-  selectedCurrencySend = "usd";
-  selectedCurrencyReceive = "gbp";
   faLongArrowAltDown = faLongArrowAltDown;
   faLongArrowAltUp = faLongArrowAltUp
   customOptions: OwlOptions = {
@@ -117,7 +129,9 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  compareObjects(o1: any, o2: any): boolean {
+    return o1.name === o2.name && o1.icon === o2.icon && o1.symbol === o2.symbol;
+  }
   changeCurrency() {
     var dummy = this.selectedCurrencySend;
     this.selectedCurrencySend = this.selectedCurrencyReceive

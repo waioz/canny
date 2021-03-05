@@ -583,7 +583,7 @@ mat-icon.mat-icon {
 
 .styled-dialog {
     .mat-dialog-container {
-        background: rgba(226, 226, 226, 0.9);
+        background: rgba(226, 226, 226, 0.95);
         max-height: 100vh;
     }
 }
@@ -640,4 +640,8 @@ mat-icon.mat-icon {
             }
         }
     }
+}
+
+.mw-100x {
+    max-width: 100px;
 }
