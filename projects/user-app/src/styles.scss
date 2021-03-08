@@ -242,7 +242,7 @@ body {
 @media (min-width: 767px) {
     .path:not(:last-child):after {
         content: "";
-        background: $text-blue;
+        background: #cacaca;
         position: absolute;
         top: 25px;
         height: 2px;
@@ -455,7 +455,7 @@ body {
 .link {
     &:not(.active) {
         .btn-gradient {
-            border: 2px solid $text-blue;
+            border: 2px solid #cacaca;
         }
     }
     .btn-gradient {
@@ -467,7 +467,7 @@ body {
             align-items: center;
             justify-content: center;
             border-radius: 1em;
-            color: $primary;
+            color: #b5b5b5;
             z-index: 1;
         }
     }
@@ -644,4 +644,16 @@ mat-icon.mat-icon {
 
 .mw-100x {
     max-width: 100px;
+}
+
+.mw-70x {
+    max-width: 70px;
+}
+
+.mat-sort-header-arrow {
+    color: $text-orange;
+}
+
+.mat-sort-header-arrow {
+    opacity: 1 !important;
 }

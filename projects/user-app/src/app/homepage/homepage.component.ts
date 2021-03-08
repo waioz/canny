@@ -3,6 +3,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { faLongArrowAltDown, faLongArrowAltUp } from '@fortawesome/free-solid-svg-icons';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { RegisterComponent } from './register/register.component';
+import { Sort } from '@angular/material/sort';
+
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -82,11 +84,11 @@ export class HomepageComponent implements OnInit {
       id: '1',
       src: '../../assets/monzo_logo.png',
       type: 'Cheapest',
-      reciepient_amount: 678.29,
+      reciepient_amount: 675.29,
       reciepient_percentage: 24.2,
       day: '1 day',
       commision_fee: 2.3,
-      commision_percentage: 0,
+      commision_percentage: 1,
       fx_rate: 1.3592,
       content: "Monzo"
     },
@@ -94,11 +96,11 @@ export class HomepageComponent implements OnInit {
       id: '2',
       src: '../../assets/paypal_logo.png',
       type: 'Best',
-      reciepient_amount: 678.29,
+      reciepient_amount: 676.29,
       reciepient_percentage: 24.2,
       day: '1 day',
       commision_fee: 2.3,
-      commision_percentage: 0,
+      commision_percentage: 3,
       fx_rate: 1.3592
     },
     {
@@ -109,25 +111,27 @@ export class HomepageComponent implements OnInit {
       reciepient_percentage: 24.2,
       day: '1 day',
       commision_fee: 2.3,
-      commision_percentage: 0,
+      commision_percentage: 4,
       fx_rate: 1.3592
     },
     {
       id: '4',
       src: '../../assets/paypal_logo.png',
       type: 'Fastest',
-      reciepient_amount: 678.29,
+      reciepient_amount: 686.29,
       reciepient_percentage: 24.2,
       day: '1 day',
       commision_fee: 2.3,
-      commision_percentage: 0,
-      fx_rate: 1.3592,
+      commision_percentage: 5,
+      fx_rate: 1.3972,
       content: "Paypal"
     },
   ]
+  sortedData;
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.sortedData = this.platforms.slice();
   }
   compareObjects(o1: any, o2: any): boolean {
     return o1.name === o2.name && o1.icon === o2.icon && o1.symbol === o2.symbol;
@@ -142,4 +146,26 @@ export class HomepageComponent implements OnInit {
       panelClass: 'styled-dialog'
     });
   }
+  sortData(sort: Sort) {
+    console.log(sort);
+    const data = this.platforms.slice();
+    if (!sort.active || sort.direction === '') {
+      this.sortedData = data;
+      return;
+    }
+
+    this.sortedData = data.sort((a, b) => {
+      const isAsc = sort.direction === 'asc';
+      switch (sort.active) {
+        case 'fx_rate': return compare(a.fx_rate, b.fx_rate, isAsc);
+        case 'commision_percentage': return compare(a.commision_percentage, b.commision_percentage, isAsc);
+        case 'recipient': return compare(a.reciepient_amount, b.reciepient_amount, isAsc);
+        default: return 0;
+      }
+    });
+  }
+}
+
+function compare(a: number | string, b: number | string, isAsc: boolean) {
+  return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
