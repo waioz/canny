@@ -52,6 +52,10 @@ body {
     left: 0;
 }
 
+.r-0 {
+    right: 0;
+}
+
 .b-0 {
     bottom: 0;
 }
@@ -443,8 +447,8 @@ body {
             left: auto;
             .mat-icon {
                 font-size: 3em;
-                width: auto;
-                height: auto;
+                width: 43px;
+                height: 42px;
                 top: 2px;
                 position: relative;
             }
