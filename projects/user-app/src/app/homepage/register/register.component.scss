@@ -79,3 +79,6 @@
 .text-indent-2 {
     text-indent: 2px;
 }
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+}

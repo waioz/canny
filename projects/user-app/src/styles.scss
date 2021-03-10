@@ -8,6 +8,7 @@ $text-blue: #0F106B;
 $text-grey: #9a9a9a;
 $text-dark-grey: #404040;
 $text-orange:#f74c21;
+$text-light-orange:#ff8702;
 @font-face {
     font-family: "Helvetica";
     src: url("./assets/fonts/Helvetica.ttf");
@@ -252,6 +253,15 @@ body {
         height: 2px;
         width: 100%;
         left: 50%;
+    }    
+    .director_details {
+        max-height: calc(100vh - 370px);
+    }
+}
+
+@media (width: 812px) {
+    .director_details {
+        max-height: none;
     }
 }
 
@@ -660,4 +670,19 @@ mat-icon.mat-icon {
 
 .mat-sort-header-arrow {
     opacity: 1 !important;
+}
+.mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+    background-color: #ff7901;   
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #ff7901;
+}
+.bg-blue {
+    background-color: $text-blue;
+}
+.bg-orange {
+    background-color: $text-orange;
+}
+.bg-light-orange {
+    background-color: $text-light-orange;
 }

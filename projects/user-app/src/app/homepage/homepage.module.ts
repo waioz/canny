@@ -7,6 +7,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSortModule } from '@angular/material/sort';
+import {MatRadioModule} from '@angular/material/radio';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
@@ -36,7 +38,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FontAwesomeModule,
     MatDialogModule,
     CarouselModule,
-    MatSortModule
+    MatSortModule,
+    NgxMatSelectSearchModule,
+    MatRadioModule
   ],
   providers: [
     {
