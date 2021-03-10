@@ -1,25 +1,28 @@
 <div class="col-12 p-0 border-light-gradient">
     <div class="container px-0 px-md-3">
-        <h1 class="font-weight-bold w-100 text-blue text-center mt-4 col-12">Search for Business</h1>
+        <h1 class="font-weight-bold w-100 text-blue text-center mt-4 col-12 popup_title" [ngClass]="{'active': slideNumber === 1}">Search for Business</h1>
+        <h1 class="font-weight-bold w-100 text-blue text-center mt-4 col-12 popup_title" [ngClass]="{'active': slideNumber === 2}">Search for Business</h1>
+        <h1 class="font-weight-bold w-100 text-blue text-center mt-4 col-12 popup_title" [ngClass]="{'active': slideNumber === 3}">Confirm Ownership & Management Details</h1>
+        <h1 class="font-weight-bold w-100 text-blue text-center mt-4 col-12 popup_title" [ngClass]="{'active': slideNumber === 4}">Help us to verify account faster</h1>
         <div class="d-flex pt-4 mb-5">
-            <div class="w-100 text-center path position-relative">
-                <a class="text-decoration-none d-inline-block link active">
+            <div class="w-100 text-center path position-relative" [ngClass]="{'completed': slideNumber > 1}">
+                <a href="javascript:void(0)" class="text-decoration-none d-inline-block link" (click)="goto_next(0)" [ngClass]="{'active': slideNumber === 1}">
                     <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-3 btn-gradient">
                         <mat-icon class="">work</mat-icon>
                     </span>
                     <p class="text-dark-grey title font-9 m-0">Business Detail</p>
                 </a>
             </div>
-            <div class="w-100 text-center path position-relative d-none d-md-block">
-                <a class="text-decoration-none d-inline-block link">
+            <div class="w-100 text-center path position-relative d-none d-md-block" [ngClass]="{'completed': slideNumber > 2}">
+                <a href="javascript:void(0)" class="text-decoration-none d-inline-block link" (click)="goto_next(1)" [ngClass]="{'active': slideNumber === 2}">
                     <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-3 btn-gradient">
                         <mat-icon class="text-indent-2">settings_suggest</mat-icon>
                     </span>
                     <p class="text-dark-grey title font-9 m-0">Business Activity</p>
                 </a>
             </div>
-            <div class="w-100 text-center path position-relative d-none d-md-block">
-                <a class="text-decoration-none d-inline-block link">
+            <div class="w-100 text-center path position-relative d-none d-md-block" [ngClass]="{'completed': slideNumber > 3}">
+                <a href="javascript:void(0)" class="text-decoration-none d-inline-block link" (click)="goto_next(2)" [ngClass]="{'active': slideNumber === 3}">
                     <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-3 btn-gradient">
                         <mat-icon class="">groups</mat-icon>
                     </span>
@@ -27,7 +30,7 @@
                 </a>
             </div>
             <div class="w-100 text-center path position-relative d-none d-md-block">
-                <a class="text-decoration-none d-inline-block link">
+                <a href="javascript:void(0)" class="text-decoration-none d-inline-block link" (click)="goto_next(3)" [ngClass]="{'active': slideNumber === 4}">
                     <span class="w-50x h-50x justify-content-center align-items-center rounded-circle d-inline-flex mb-3 btn-gradient">
                         <mat-icon class="">person</mat-icon>
                     </span>

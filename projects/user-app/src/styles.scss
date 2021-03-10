@@ -245,15 +245,23 @@ body {
 }
 
 @media (min-width: 767px) {
-    .path:not(:last-child):after {
-        content: "";
-        background: #cacaca;
-        position: absolute;
-        top: 25px;
-        height: 2px;
-        width: 100%;
-        left: 50%;
-    }    
+    .path:not(:last-child){
+        &::after {
+            content: "";
+            background: #cacaca;
+            position: absolute;
+            top: 25px;
+            height: 2px;
+            transition: all 0.5s;
+            width: 100%;
+            left: 50%;
+        } 
+        &.completed {
+            &::after {
+                background: $text-blue;
+            }
+        }
+    }   
     .director_details {
         max-height: calc(100vh - 370px);
     }
@@ -473,7 +481,9 @@ body {
         }
     }
     .btn-gradient {
+        @extend .transition;
         .mat-icon {
+            @extend .transition;
             background: #dbdbdb;
             width: 100%;
             height: 100%;
@@ -490,10 +500,12 @@ body {
             background: linear-gradient(to bottom right, #ffa603, #ff4700);
             padding: 2px;
             z-index: 2;
+            @extend .transition;
             position: relative;
             .mat-icon {
                 background: linear-gradient(to bottom right, #ffa603, #ff4700);
                 color: #fff;
+                @extend .transition;
             }
         }
         .title {
@@ -685,4 +697,16 @@ mat-icon.mat-icon {
 }
 .bg-light-orange {
     background-color: $text-light-orange;
+}
+.completed {
+    .link {
+        .btn-gradient {
+            border: 0;
+            background: linear-gradient(to bottom right, #ffa603, #ff4700);
+            .mat-icon {
+                background-color: $text-blue;
+                color: #fff;
+            }
+        }
+    }
 }

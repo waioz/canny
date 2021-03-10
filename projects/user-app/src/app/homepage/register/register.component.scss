@@ -82,3 +82,16 @@
 .mat-radio-button ~ .mat-radio-button {
     margin-left: 16px;
 }
+.popup_title {
+    opacity: 0;
+    display: none;
+    &.active {
+        opacity: 1;
+        animation: fade 2s linear;
+        display: block;
+    }
+}
+@keyframes fade {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+  }
