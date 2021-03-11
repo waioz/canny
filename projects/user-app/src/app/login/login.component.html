@@ -1,0 +1,38 @@
+<div class="row mx-0 pt-5 bg-gradient">
+    <div class="row m-0 container mx-auto pt-5">
+        <div class="row m-0 py-lg-5 w-100 align-items-center my-4 mb-lg-0">
+            <div class="col-lg-6 col-md-6 col-12 left_title pr-md-5 pr-lg-0 d-none d-md-block">
+                <p class="font-weight-bold fa-3x text-blue">Lorem ipsum, dolor sit, amet</p>
+                <p class="text-blue font-weight-light">Tione quis beatae aspernatur magnam fugit inventore velit, ab ipsum? Doloribus, nesciunt!</p>
+                <a href="javascript:void(0)" class="mt-2 mb-2 font-weight-bold d-inline-flex navigate_hover px-4 py-2 text-decoration-none transition align-items-center">Explore <mat-icon class="transition ml-2">keyboard_arrow_right</mat-icon></a>
+            </div>
+            <div class="col-lg-5 col-md-6 col-12 ml-auto pl-md-5 right_section py-5">
+                <h1 class="fa-4x font-weight-bold text-blue">Hello,</h1>
+                <h2 class="fa-4x font-weight-bold text-blue">Welcome</h2>
+                <div class="col-12 p-3 mb-3">
+                    <mat-form-field appearance="legacy" class="no_style_input w-100">
+                        <mat-label class="">Username</mat-label>
+                        <input autocomplete="off" class="font-weight-bold font_13" matInput>
+                    </mat-form-field>
+                    <mat-form-field appearance="legacy" class="no_style_input w-100">
+                        <mat-label class="">Password</mat-label>
+                        <input [type]="hide ? 'password' : 'text'" autocomplete="off" class="font-weight-bold font_13" matInput>
+                        <i class="material-icons pointer text-dark-grey font_13" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</i>
+                    </mat-form-field>
+                    <mat-checkbox class="example-margin text-dark-grey font-9">Remember me!</mat-checkbox>
+                </div>
+                <div class="col-12 text-center">
+                    <p class="text-dark-grey">Don't have an account? <a [routerLink]="['/path']" class="text-decoration-none text-blue transition font-weight-bold ml-1">Register</a></p>
+                    <a href="javascript:void(0)" class="mt-2 mb-2 font-weight-bold d-inline-flex navigate_hover px-4 py-2 text-decoration-none transition align-items-center">Login <mat-icon class="transition ml-2">keyboard_arrow_right</mat-icon></a>
+                    <p class="text-dark-grey mb-2">or</p>
+                    <p class="text-dark-grey mb-4">login with</p>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="javascript:void(0)" class="mr-4 text-decoration-none"><img src="../../assets/facebook.svg" alt=""></a>
+                        <a href="javascript:void(0)" class="mr-4 text-decoration-none"><img src="../../assets/google.svg" alt=""></a>
+                        <a href="javascript:void(0)" class="text-decoration-none"><img src="../../assets/twitter.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

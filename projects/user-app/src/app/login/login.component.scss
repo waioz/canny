@@ -1,0 +1,27 @@
+.navigate_hover {
+    color: #0e106b;
+    border-radius: 2em;
+    line-height: 35px;
+    transition: all 0.4s;
+    &:hover {
+        color: #fff;
+        background: #0e106b;
+        .mat-icon {
+            animation-name: bounceAlpha;
+            animation-duration: 1.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+}
+.right_section {    
+    background: -webkit-linear-gradient(-180deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 330%);
+}
+@media (max-width: 767px) {
+    .right_section {
+        background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 1) 330%);
+    }
+    .fa-4x {
+        font-size: 3em;
+    }
+}
