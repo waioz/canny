@@ -90,6 +90,7 @@ body {
 
 .bg-gradient {
     background: url("./assets/background.svg") no-repeat top / cover;
+    min-height: calc(100vh - 60px);
 }
 
 .text-blue {
@@ -564,7 +565,7 @@ body {
 }
 
 mat-icon.mat-icon {
-    height: 28px;
+    // height: 28px;
 }
 
 .rotate_arrow {
@@ -709,4 +710,18 @@ mat-icon.mat-icon {
             }
         }
     }
+}
+.mat-checkbox-frame {
+    border-color: rgba(0,0,0,.4);
+}
+.mat-checkbox-checked {
+    .mat-checkbox-frame {
+        border-color: $text-blue;
+    }
+}
+.mat-checkbox-checkmark-path {
+    stroke: $text-blue !important;
+}
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: transparent;
 }

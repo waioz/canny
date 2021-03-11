@@ -174,7 +174,7 @@
                     <a href="javascript:void(0)" (click)="goto_back(4)" class="mr-4 d-flex align-items-center text-decoration-none text-dark-grey">
                         <span class="font-9"><mat-icon [inline]="true">keyboard_arrow_left</mat-icon></span> Previous
                     </a>
-                    <button type="button" class="btn border-0 d-inline-flex align-items-center transition justify-content-center font-weight-bold rounded-pill transition px-4 py-2 shadow-none outline-none">Continue
+                    <button type="button" [routerLink]="['/login']" class="btn border-0 d-inline-flex align-items-center transition justify-content-center font-weight-bold rounded-pill transition px-4 py-2 shadow-none outline-none">Continue
                         <mat-icon [inline]="true">keyboard_arrow_right</mat-icon>
                     </button>
                 </div>

@@ -4,6 +4,7 @@ import { faLongArrowAltDown, faLongArrowAltUp } from '@fortawesome/free-solid-sv
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { RegisterComponent } from './register/register.component';
 import { Sort } from '@angular/material/sort';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -128,10 +129,13 @@ export class HomepageComponent implements OnInit {
     },
   ]
   sortedData;
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, public router: Router) { }
 
   ngOnInit(): void {
     this.sortedData = this.platforms.slice();
+    this.router.events.subscribe(() => {
+      this.dialog.closeAll()
+    });
   }
   compareObjects(o1: any, o2: any): boolean {
     return o1.name === o2.name && o1.icon === o2.icon && o1.symbol === o2.symbol;
