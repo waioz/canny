@@ -4,11 +4,16 @@
             <div class="col-lg-6 col-md-6 col-12 left_title pr-md-5 pr-lg-0 d-none d-md-block">
                 <p class="font-weight-bold fa-3x text-blue">Lorem ipsum, dolor sit, amet</p>
                 <p class="text-blue font-weight-light">Tione quis beatae aspernatur magnam fugit inventore velit, ab ipsum? Doloribus, nesciunt!</p>
-                <a href="javascript:void(0)" class="mt-2 mb-2 font-weight-bold d-inline-flex navigate_hover px-4 py-2 text-decoration-none transition align-items-center">Explore <mat-icon class="transition ml-2">keyboard_arrow_right</mat-icon></a>
+                <div class="d-flex">
+                    <a href="javascript:void(0)" (click)="openDialog()" class="mr-4 d-flex align-items-center text-decoration-none text-dark-grey">
+                        <span class="font-9"><mat-icon [inline]="true">keyboard_arrow_left</mat-icon></span> Back
+                    </a>
+                    <a href="javascript:void(0)" class="mt-2 mb-2 font-weight-bold d-inline-flex navigate_hover px-4 py-2 text-decoration-none transition align-items-center">Explore <mat-icon class="transition ml-2">keyboard_arrow_right</mat-icon></a>
+                </div>
             </div>
             <div class="col-lg-5 col-md-6 col-12 ml-auto pl-md-5 right_section py-5">
                 <h1 class="fa-4x font-weight-bold text-blue">Hello,</h1>
-                <h2 class="fa-4x font-weight-bold text-blue">Welcome</h2>
+                <h2 class="fa-4x font-weight-bold gradient-text">Welcome</h2>
                 <div class="col-12 p-3 mb-3">
                     <mat-form-field appearance="legacy" class="no_style_input w-100">
                         <mat-label class="">Username</mat-label>
@@ -22,8 +27,8 @@
                     <mat-checkbox class="example-margin text-dark-grey font-9">Remember me!</mat-checkbox>
                 </div>
                 <div class="col-12 text-center">
-                    <p class="text-dark-grey">Don't have an account? <a [routerLink]="['/path']" class="text-decoration-none text-blue transition font-weight-bold ml-1">Register</a></p>
-                    <a href="javascript:void(0)" class="mt-2 mb-2 font-weight-bold d-inline-flex navigate_hover px-4 py-2 text-decoration-none transition align-items-center">Login <mat-icon class="transition ml-2">keyboard_arrow_right</mat-icon></a>
+                    <p class="text-dark-grey">Don't have an account? <a [routerLink]="['/path']" class="text-decoration-none text-blue transition font-weight-bold ml-1">Signup</a></p>
+                    <a href="javascript:void(0)" class="mt-2 mb-2 font-weight-bold d-inline-flex navigate_hover px-4 py-2 text-decoration-none transition align-items-center">Signin <mat-icon class="transition ml-2">keyboard_arrow_right</mat-icon></a>
                     <p class="text-dark-grey mb-2">or</p>
                     <p class="text-dark-grey mb-4">login with</p>
                     <div class="d-flex align-items-center justify-content-center">

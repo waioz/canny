@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatSelect } from '@angular/material/select';
+import { Router } from '@angular/router';
 import { ReplaySubject, Subject } from 'rxjs';
 import { take, takeUntil } from 'rxjs/operators';
+import { CommonService } from '../../common.service';
 
 interface Category {
   id: string,
@@ -26,7 +28,13 @@ export class RegisterComponent implements OnInit {
   private _onDestroy = new Subject<void>();
   @ViewChild('singleSelect') singleSelect: MatSelect;
 
-  constructor() { }
+  constructor(public commonService: CommonService, public router: Router) { 
+    this.commonService.page_data.subscribe((data) => {
+      if(data == 'login') {
+        this.goto_next(3);
+      }
+    })
+  }
 
   ngOnInit(): void {
     this.filteredCategories.next(this.categories.slice());
@@ -111,6 +119,11 @@ export class RegisterComponent implements OnInit {
   }
 
   goto_next(value) {
+    if(value == 'login') {
+      this.router.navigateByUrl('/login');
+      this.commonService.registerSubmit('login')
+      return
+    }
     this.slideNumber = value+1;
     this.leftValue = 'translateX(-'+parseInt(value) * 100+"%)";
   }
